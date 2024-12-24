@@ -23,6 +23,3 @@ It's effectively coursetable for SOM, a course reviewing website for students to
 	• Reviews on 100% of the courses every quarter/semester (depending on the length of the course)
 
 
-
-
-![image](https://github.com/user-attachments/assets/fc3fb334-c2be-45d1-a344-7c71ff599ceb)
