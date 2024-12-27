@@ -1,0 +1,26 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["react/next", "react-dom/next", "jest"], 
+    // "jest" is crucial so TS sees the "test" globals.
+
+    // The key part that lets TypeScript parse JSX like <div>:
+    "jsx": "react" 
+  },
+  "include": ["src"],
+  "typeRoots": ["node_modules/@types"]
+
+}

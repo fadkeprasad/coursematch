@@ -1,0 +1,367 @@
+﻿courseNumber,courseTitle,daytime,faculty1,Units
+MGMT721,Modeling Operational Processes,W 4:10 PM-7:10 PM,"Rudi, Nils",1
+MGT402,Basics of Accounting,M  W 10:10 AM-11:30 AM,"Nakhmurina, Anya",2
+MGT402,Basics of Accounting,M  W 1:00 PM-2:20 PM,"Nakhmurina, Anya",2
+MGT402,Basics of Accounting,M  W 2:40 PM-4:00 PM,"Nakhmurina, Anya",2
+MGT402,Basics of Accounting,T  Th 1:00 PM-2:20 PM,"Nakhmurina, Anya",2
+MGT402,Basics of Accounting,T  Th 2:40 PM-4:00 PM,"Nakhmurina, Anya",2
+MGT403,Probability Modeling & Statistics,M  W 10:10 AM-11:30 AM,"Seim, Katja",2
+MGT403,Probability Modeling & Statistics,M  W 1:00 PM-2:20 PM,"Seim, Katja",2
+MGT403,Probability Modeling & Statistics,M  W 2:40 PM-4:00 PM,"Seim, Katja",2
+MGT403,Probability Modeling & Statistics,T  Th 10:10 AM-11:30 AM,"Seim, Katja",2
+MGT403,Probability Modeling & Statistics,T  Th 1:00 PM-2:20 PM,"Seim, Katja",2
+MGT404,Basics of Economics,M  W 8:30 AM-9:50 AM,"Yang, Kai Hao",2.5
+MGT404,Basics of Economics,M  W 10:10 AM-11:30 AM,"Yang, Kai Hao",2.5
+MGT404,Basics of Economics,M  W 1:00 PM-2:20 PM,"Yang, Kai Hao",2.5
+MGT404,Basics of Economics,M  W 2:40 PM-4:00 PM,"Yang, Kai Hao",2.5
+MGT404,Basics of Economics,M  W 4:10 PM-5:30 PM,"Yang, Kai Hao",2.5
+MGT405,Modeling Managerial Decisions,M  W 10:10 AM-11:30 AM,"Jain, Anjani",2
+MGT405,Modeling Managerial Decisions,M  W 1:00 PM-2:20 PM,"Jain, Anjani",2
+MGT405,Modeling Managerial Decisions,T  Th 10:10 AM-11:30 AM,"Jain, Anjani",2
+MGT405,Modeling Managerial Decisions,T  Th 1:00 PM-2:20 PM,"Jain, Anjani",2
+MGT405,Modeling Managerial Decisions,T  Th 2:40 PM-4:00 PM,"Jain, Anjani",2
+MGT510,Data Analysis and Causal Inference,M  W 1:00 PM-2:20 PM,"Jensen, Robert",2
+MGT537,Inequality and Social Mobility,T  Th 10:10 AM-11:30 AM,"Biasi, Barbara",2
+MGT538,Mastering Influence & Persuasion,M  W 8:30 AM-9:50 AM,"Chance, Zoe",2
+MGT538,Mastering Influence & Persuasion,M  W 10:10 AM-11:30 AM,"Chance, Zoe",2
+MGT538,Mastering Influence & Persuasion,M  W 1:00 PM-2:20 PM,"Chance, Zoe",2
+MGT538,Mastering Influence & Persuasion,M  W 2:40 PM-4:00 PM,"Chance, Zoe",2
+MGT559,Marketing Strategy,M  W 8:30 AM-9:50 AM,"Shin, Jiwoong",2
+MGT559,Marketing Strategy,M  W 10:10 AM-11:30 AM,"Shin, Jiwoong",2
+MGT582,The Future of Global Finance,Th 1:00 PM-4:00 PM,"Garten, Jeffrey",2
+MGT627,Business and Government After Communism,T  Th 10:10 AM-11:30 AM,"Shapiro, Ian",2
+MGT636,Global Leadership: Personal & Interpersonal Effectiveness,T 4:10 PM-7:10 PM,"Tate, David",2
+MGT663,"Innovation, Investments, and New Frontiers in Medicine",T 2:40 PM-5:40 PM,"Knight, Stephen",2
+MGT671,Entrepreneurship through Acquisition,M  W 10:10 AM-11:30 AM,"Wasserstein, A.J.",2
+MGT823,Insurance and Finance for the Poor,M  W 10:10 AM-11:30 AM,"Jensen, Robert",2
+MGT831,Work Motivation and Engagement,T  Th 1:00 PM-2:20 PM,"Shin, Jihae",2
+MGT831,Work Motivation and Engagement,T  Th 2:40 PM-4:00 PM,"Shin, Jihae",2
+MGT838,Entrepreneurship in the Art Market,M 4:10 PM-7:10 PM,"Resch, Magnus",2
+MGT847,Private Equity: Leveraged Buyouts,W 4:10 PM-7:10 PM,"Cascade, Joshua",2
+MGT850,The Science of Experiences and Well-Being,M  W 8:30 AM-9:50 AM,"Zauberman, Gal",2
+MGT850,The Science of Experiences and Well-Being,M  W 10:10 AM-11:30 AM,"Zauberman, Gal",2
+MGT851,Strategic Market Measurement,T  Th 8:30 AM-9:50 AM,"Sudhir, K.",2
+MGT851,Strategic Market Measurement,T  Th 10:10 AM-11:30 AM,"Sudhir, K.",2
+MGT857,Digital Strategy,T  Th 1:00 PM-2:20 PM,"Kumar, Vineet",2
+MGT857,Digital Strategy,T  Th 2:40 PM-4:00 PM,"Kumar, Vineet",2
+MGT857,Digital Strategy,T  Th 4:10 PM-5:30 PM,"Kumar, Vineet",2
+MGT884,Managing Groups & Teams,M 2:40 PM-5:40 PM,"Munguia Gomez, David",2
+MGT895,International Real Estate,T 4:10 PM-7:10 PM,"Gray, Kevin",2
+MGT923,Asset Pricing Theory,T 4:10 PM-7:10 PM,"Majd, Saman",2
+MGT924,Statistical Foundations,T  Th 1:00 PM-2:20 PM,"Jensen, Theis",2
+MGT929,ESG Investing,M  W 8:30 AM-9:50 AM,"Watts, Edward",2
+MGT929,ESG Investing,M  W 10:10 AM-11:30 AM,"Watts, Edward",2
+MGT946,Central Banking in Emerging Economies,T  Th 10:10 AM-11:30 AM,"Duvvuri, Subba",2
+MGMT742a,Financial Econometrics and Machine Learning,F 1:00 PM-4:00 PM,"Kelly, Bryan",0.5
+MGT410,Competitor,M  W 8:30 AM-9:50 AM,"Chevalier, Judith",2
+MGT410,Competitor,M  W 10:10 AM-11:30 AM,"Chevalier, Judith",2
+MGT410,Competitor,M  W 1:00 PM-2:20 PM,"Chevalier, Judith",2
+MGT410,Competitor,M  W 2:40 PM-4:00 PM,"Chevalier, Judith",2
+MGT410,Competitor,M  W 4:10 PM-5:30 PM,"Chevalier, Judith",2
+MGT411,Customer,M  W 8:30 AM-9:50 AM,"Shin, Jiwoong",2
+MGT411,Customer,M  W 10:10 AM-11:30 AM,"Shin, Jiwoong",2
+MGT411,Customer,M  W 1:00 PM-2:20 PM,"Shin, Jiwoong",2
+MGT411,Customer,T  Th 8:30 AM-9:50 AM,"Shin, Jiwoong",2
+MGT411,Customer,T  Th 10:10 AM-11:30 AM,"Shin, Jiwoong",2
+MGT412,Investor,M  W 10:10 AM-11:30 AM,"Fontanier, Paul",2
+MGT412,Investor,M  W 1:00 PM-2:20 PM,"Fontanier, Paul",2
+MGT412,Investor,T  Th 10:10 AM-11:30 AM,"Fontanier, Paul",2
+MGT412,Investor,T  Th 1:00 PM-2:20 PM,"Fontanier, Paul",2
+MGT412,Investor,T  Th 2:40 PM-4:00 PM,"Fontanier, Paul",2
+MGT413,State & Society,T  Th 8:30 AM-9:50 AM,"Mobarak, Mushfiq",2
+MGT413,State & Society,T  Th 10:10 AM-11:30 AM,"Mobarak, Mushfiq",2
+MGT413,State & Society,T  Th 1:00 PM-2:20 PM,"Mobarak, Mushfiq",2
+MGT413,State & Society,T  Th 2:40 PM-4:00 PM,"Mobarak, Mushfiq",2
+MGT413,State & Society,T  Th 4:10 PM-5:30 PM,"Mobarak, Mushfiq",2
+MGT529,Global Social Entrepreneurship: India,W 2:40 PM-5:40 PM,"Ghosh, Asha",2
+MGT532,Business Ethics,T  Th 10:10 AM-11:30 AM,"Dana, Jason",2
+MGT532,Business Ethics,T  Th 1:00 PM-2:20 PM,"Cusimano, Corey",2
+MGT532,Business Ethics,T  Th 10:10 AM-11:30 AM,"Cusimano, Corey",2
+MGT553,Strategic Communication: Delivering Effective Presentations,T  Th 10:10 AM-11:30 AM,"Reich, Taly",2
+MGT553,Strategic Communication: Delivering Effective Presentations,T  Th 1:00 PM-2:20 PM,"Reich, Taly",2
+MGT558,Consumer Behavior,M  W 2:40 PM-4:00 PM,"Klusowski, Joowon",2
+MGT558,Consumer Behavior,T  Th 2:40 PM-4:00 PM,"Klusowski, Joowon",2
+MGT558,Consumer Behavior,M  W 1:00 PM-2:20 PM,"Klusowski, Joowon",2
+MGT582,The Future of Global Finance,Th 1:00 PM-4:00 PM,"Garten, Jeffrey",2
+MGT633,Topics in Advanced Management for Business & Society,T  Th 2:40 PM-4:00 PM,"Jensen, Robert",2
+MGT649,World Financial History,T  Th 10:10 AM-11:30 AM,"Goetzmann, William",2
+MGT674,Leading Small and Medium Enterprises,M  W 10:10 AM-11:30 AM,"Wasserstein, A.J.",2
+MGT800,Crisis Management in Tech,M  W 10:10 AM-11:30 AM,"Guarini, Kathryn",2
+MGT802,Large language models: technology and applications,T  Th 1:00 PM-2:20 PM,"Jensen, Kyle",2
+MGT802,Large language models: technology and applications,T  Th 2:40 PM-4:00 PM,"Jensen, Kyle",2
+MGT805,"Fixed Income Securities: Bonds, Swaps, and Derivatives (Part 1)",T  Th 10:10 AM-11:30 AM,"Majd, Saman",2
+MGT809,Advanced Business Analytics,M  W 2:40 PM-4:00 PM,"Lian, Zhen",2
+MGT809,Advanced Business Analytics,M  W 4:10 PM-5:30 PM,"Lian, Zhen",2
+MGT813,Statistics for Business & Society: Advanced Practicum,M  W 1:00 PM-2:20 PM,"Jensen, Robert",2
+MGT815,Managerial Controls,M  W 10:10 AM-11:30 AM,"Steffen, Thomas",2
+MGT815,Managerial Controls,M  W 1:00 PM-2:20 PM,"Steffen, Thomas",2
+MGT815,Managerial Controls,M  W 8:30 AM-9:50 AM,"Steffen, Thomas",2
+MGT840,"Stakeholders, Management, and Capitalism",M 2:40 PM-5:40 PM,"Snyder, Edward",2
+MGT844,Finance and Society: The Rise of Private Capital ,T 4:10 PM-7:10 PM,"Ma, Song",2
+MGT887,Negotiations,W 8:30 AM-11:30 AM,"Cain, Daylian",2
+MGT887,Negotiations,W 1:00 PM-4:00 PM,"Cain, Daylian",2
+MGT887,Negotiations,T 1:00 PM-4:00 PM,"Cain, Daylian",2
+MGT894,Connected Cities and Urban Ecosystems,M 2:40 PM-5:40 PM,"Darwish, Sasson",2
+MGT897,Entrepreneurial Finance,M  W 1:00 PM-2:20 PM,"Ma, Song",2
+MGT897,Entrepreneurial Finance,M  W 2:40 PM-4:00 PM,"Ma, Song",2
+MGT927,Financial Econometrics and Machine Learning,F 8:30 AM-11:30 AM,"Kelly, Bryan",2
+MGT932,Financial Markets & Macroeconomic Policy,M  W 10:10 AM-11:30 AM,"Simsek, Alp",2
+MGT932,Financial Markets & Macroeconomic Policy,M  W 2:40 PM-4:00 PM,"Simsek, Alp",2
+MGT933,Investing Excellence,Th 3:00 PM-6:00 PM,"Takahashi, Dean",2
+MGT997,Venture Capital and Private Equity,M  W 8:30 AM-9:50 AM,"Ma, Song",2
+MGT997,Venture Capital and Private Equity,M  W 10:10 AM-11:30 AM,"Ma, Song",2
+MGMT700,SeminarAccountingRsrch I,Th 2:00 PM-6:00 PM,"Huang, Zeqiong",1
+MGMT732,Psychological and Organizational Approaches to Trust and Ethics,M 8:30 AM-11:30 AM,"Levine, Emma",1
+MGMT740,Financial Economics I,M 1:00 PM-4:00 PM,"Giglio, Stefano",1
+MGMT753,Behavioral Decision Making: Choice,T 4:10 PM-7:10 PM,"Dhar, Ravi",1
+MGMT760,Current Topics in Judgement and Decision-Making,Th 2:30 PM-5:30 PM,"Zauberman, Gal",1
+MGMT762,Macro Finance,T 4:10 PM-7:10 PM,"Simsek, Alp",1
+MGMT763,Organizations and Management II: Macro and Meso Perspectives on Organizations and Their Environment,M 1:00 PM-4:00 PM,"DiBenigno, Julia",1
+MGMT781,Accounting/Finance Seminar,F 11:10 AM-12:30 PM,"Fontanier, Paul",1
+MGMT781,Marketing Seminar,Th 11:35 AM-12:50 PM,"Klusowski, Joowon",1
+MGMT781,Organizations & Management Seminar,T 11:35 AM-12:50 PM,"Mungia Gomez, David",1
+MGMT781,Operations Seminar,T 11:35 AM-12:45 PM,"Monachou, Faidra",1
+MGMT782,Ph.D. PreSeminar: Financial Economics,F 9:50 AM-11:00 AM,"Fontanier, Paul",1
+MGMT782,Ph.D. PreSeminar: Marketing,Th 10:10 AM-11:20 AM,"Klusowski, Joowon",1
+MGMT782,Ph.D. PreSeminar: Organizations & Management,T 10:10 AM-11:20 AM,"Mungia Gomez, David",1
+MGMT782,Ph.D. PreSeminar: Operations,M 1:00 PM-4:00 PM,"Monachou, Faidra",1
+MGT525,Competitive Strategy,Th 2:40 PM-5:40 PM,"Marciano, Sonia",4
+MGT527,Strategic Management of Nonprofit Organizations,T  Th 8:30 AM-9:50 AM,"Chevalier, Judith",4
+MGT531,Interpersonal Dynamics,T 2:40 PM-5:40 PM,"Brooks, Heidi",4
+MGT536,Urban Poverty and Economic Development,T  Th 1:00 PM-2:20 PM,"Cooney, Kate",4
+MGT541,Corporate Finance,T 8:30 AM-11:30 AM,"Tookes, Heather",4
+MGT546,Real Estate Development,Th 2:40 PM-5:40 PM,"Sheinberg, Zachary",4
+MGT563,Energy Systems Analysis,M  W 9:00 AM-10:20 AM,"Rao, Narasimha",4
+MGT595,Quantitative Investing,T 8:30 AM-11:30 AM,"Moskowitz, Tobias",4
+MGT606,Economic Evolution of the Latin American and Caribbean Countries,M 9:25 AM-11:15 AM,"Zedillo, Ernesto",4
+MGT611,Policy Modeling,M  W 10:10 AM-11:30 AM,"Kaplan, Edward",4
+MGT622,Game Theory,T  Th 11:35 AM-12:50 PM,"Polak, Benjamin",4
+MGT628,Central Banking,M  W 1:00 PM-2:15 PM,"English, William",4
+MGT629,Ethical Choices in Public Leadership,F 8:30 AM-11:15 AM,"Braverman, Eric",4
+MGT632,Housing Connecticut: Developing Healthy and Sustainable Neighborhoods,F 9:30 AM-12:30 PM,"Cooney, Kate",4
+MGT637,Social Innovation Starter,T 1:00 PM-3:00 PM,"Chahine, Teresa",4
+MGT646,Start-up Founder Practicum,T 11:40 AM-12:50 PM,"McFadden, Jennifer",4
+MGT650,Customer Insights and Applications,W 5:45 PM-7:15 PM,"Ahmed, Treeny",6
+MGT656,Management of Software Development,M  W 2:40 PM-4:00 PM,"Jensen, Kyle",4
+MGT659,Business Organizations,M  W 10:10 AM-12:00 PM,"Macey, Jonathan",4
+MGT667,Secured Transactions,T  Th 2:10 PM-4:00 PM,"Janger, Ted",4
+MGT699,Colloquium in Healthcare Leadership,Th 6:30 PM-7:30 PM,"Forman, Howie",1
+MGT817,Sports Analytics,T 4:10 PM-7:10 PM,"Moskowitz, Tobias",4
+MGT837,Policy Design,M  W 1:00 PM-2:20 PM,"Abaluck, Jason",4
+MGT867,Modern Philanthropy: Perspectives and Challenges,Th 2:40 PM-5:40 PM,"Chevalier, Judith",4
+MGT890,Global Financial Crisis,T  Th 1:00 PM-2:20 PM,"Metrick, Andrew",4
+MGT921,Asset Management Colloquium,F 12:30 PM-2:30 PM,"Moskowitz, Tobias",2
+MGT944,Macroprudential Policy I,M  W 2:40 PM-4:00 PM,"Benediktsdottir, Sigga",4
+MGT948,Security Analysis & Valuation,M  W 10:10 AM-11:30 AM,"Spiegel, Matthew",4
+MGT949,Systemic-Risk Colloquium,F 2:00 PM-3:20 PM,"Metrick, Andrew",2
+MGT960,Economic Analysis of High-Tech Industries,T  Th 8:30 AM-9:50 AM,"Snyder, Edward",4
+MGT960,Economic Analysis of High-Tech Industries,T  Th 10:10 AM-11:30 AM,"Snyder, Edward",4
+MGT984,Studies in Grand Strategy II,M 1:30 PM-3:20 PM,"Westad, Arne",4
+MGT992,Health Care Strategy,M  W 2:40 PM-4:00 PM,"Abaluck, Jason",4
+MGMT720a,Models of Operations Research and Management,T 8:30 AM-11:30 AM,"Manshadi, Vahideh",0.5
+MGMT742a,Financial Econometrics and Machine Learning,F 1:00 PM-4:00 PM,"Kelly, Bryan",0.5
+MGT408,Introduction to Negotiation,M 10:10 AM-12:10 PM,"Nalebuff, Barry",1
+MGT408,Introduction to Negotiation,M 1:00 PM-3:00 PM,"Nalebuff, Barry",1
+MGT408,Introduction to Negotiation,M 3:10 PM-5:10 PM,"Nalebuff, Barry",1
+MGT408,Introduction to Negotiation,T 10:10 AM-12:10 PM,"Nalebuff, Barry",1
+MGT408,Introduction to Negotiation,T 1:00 PM-3:00 PM,"Nalebuff, Barry",1
+MGT416,International Experience: Costa Rica,M 4:10 PM-7:10 PM,"Van Patten, Diana",4
+MGT416,International Experience: Spain,T 4:10 PM-6:10 PM,"Arellano-Bover, Jaime",4
+MGT416,International Experience: Mexico,T 4:10 PM-7:00 PM,"Argente, David",4
+MGT416,International Experience: China,Th 4:10 PM-6:10 PM,"Huang, Zeqiong",4
+MGT416,International Experience: Japan,W 4:10 PM-6:10 PM,"Watts, Edward",4
+MGT416,International Experience: South Korea,M 6:00 PM-9:00 PM,"Kim, Sang",4
+MGT416,International Experience: Ireland,W 10:10 AM-11:30 AM,"Spiegel, Matthew",4
+MGT416,International Experience: Bhutan,T 4:10 PM-6:10 PM,"Lee, Mary Alice",4
+MGT420,The Workforce,M  W 8:30 AM-9:50 AM,"Baron, James",2
+MGT420,The Workforce,M  W 10:10 AM-11:30 AM,"Baron, James",2
+MGT420,The Workforce,M  W 1:00 PM-2:20 PM,"Baron, James",2
+MGT420,The Workforce,T  Th 10:10 AM-11:30 AM,"Baron, James",2
+MGT420,The Workforce,T  Th 1:00 PM-2:20 PM,"Baron, James",2
+MGT422,Operations Engine,M  W 1:00 PM-2:20 PM,"Lian, Zhen",2
+MGT422,Operations Engine,M  W 2:40 PM-4:00 PM,"Lian, Zhen",2
+MGT422,Operations Engine,T  Th 10:10 AM-11:30 AM,"Meng, Lesley",2
+MGT422,Operations Engine,T  Th 1:00 PM-2:20 PM,"Meng, Lesley",2
+MGT422,Operations Engine,T  Th 2:40 PM-4:00 PM,"Meng, Lesley",2
+MGT423,Sourcing & Managing Funds,M  W 10:10 AM-11:30 AM,"Thomas, Jacob",2
+MGT423,Sourcing & Managing Funds,M  W 1:00 PM-2:20 PM,"Thomas, Jacob",2
+MGT423,Sourcing & Managing Funds,M  W 2:40 PM-4:00 PM,"Thomas, Jacob",2
+MGT423,Sourcing & Managing Funds,T  Th 8:30 AM-9:50 AM,"Rouwenhorst, Geert",2
+MGT423,Sourcing & Managing Funds,T  Th 10:10 AM-11:30 AM,"Rouwenhorst, Geert",2
+MGT529,Global Social Entrepreneurship: India,W 2:40 PM-5:40 PM,"Ghosh, Asha",4
+MGT614,Data Visualization for Social Sector,W 2:40 PM-5:40 PM,"Cooney, Kate",2
+MGT620,Games & Information I,T  Th 1:00 PM-2:20 PM,"Polak, Benjamin",2
+MGT631,Public Health Entrepreneurship,M  W 10:10 AM-11:30 AM,"Chahine, Teresa",2
+MGT631,Public Health Entrepreneurship,M  W 1:00 PM-2:20 PM,"Chahine, Teresa",2
+MGT635,Mergers & Acquisitions,T  Th 8:30 AM-9:50 AM,"Hirst, Simon",2
+MGT636,Global Leadership: Personal & Interpersonal Effectiveness ,W 4:10 PM-7:10 PM,"Tate, David",2
+MGT654,Data-Driven Value Creation in Healthcare and Life Sciences,T  Th 10:10 AM-11:30 AM,"Rozenblit, Leon",2
+MGT665,Principles of Entrepreneurship,T  Th 8:30 AM-9:50 AM,"Kovacs, Balazs",2
+MGT665,Principles of Entrepreneurship,T  Th 10:10 AM-11:30 AM,"Kovacs, Balazs",2
+MGT665,Principles of Entrepreneurship,T  Th 1:00 PM-2:20 PM,"Kovacs, Balazs",2
+MGT677,"Rollups, Consolidations and Programmatic Acquisitions",M  W 10:10 AM-11:30 AM,"Wasserstein, A.J.",2
+MGT801,Impact Measurement & Financial Reporting in the Social Sector,M  W 8:30 AM-9:50 AM,"Duguay, Raphael",2
+MGT801,Impact Measurement & Financial Reporting in the Social Sector,M  W 10:10 AM-11:30 AM,"Duguay, Raphael",2
+MGT806,Private Equity: Value Creation,T 6:00 PM-9:00 PM,"Blumenthal, Adam",2
+MGT812,Financial Statement Analysis,T  Th 1:00 PM-2:20 PM,"Zhang, Frank",2
+MGT812,Financial Statement Analysis,T  Th 10:10 AM-11:30 AM,"Zhang, Frank",2
+MGT818,Global Virtual Teams,T  Th 4:10 PM-6:10 PM,"Fujikawa, Yoshinori",2
+MGT819,Data Science,M  W 10:10 AM-11:30 AM,"Manshadi, Vahideh",2
+MGT819,Data Science,M  W 1:00 PM-2:20 PM,"Manshadi, Vahideh",2
+MGT819,Data Science,M  W 2:40 PM-4:00 PM,"Manshadi, Vahideh",2
+MGT821,From Cash to Crypto: The Evolution of Payment Methods,M  W 2:40 PM-4:00 PM,"Argente, David",2
+MGT822,Game Theory and Market Design,T  Th 10:10 AM-11:30 AM,"Zhou, Jidong",2
+MGT822,Game Theory and Market Design,T  Th 2:40 PM-4:00 PM,"Zhou, Jidong",2
+MGT832,Leadership Lab,M  W 1:00 PM-2:20 PM,"Biggerstaff, Sarah",2
+MGT832,Leadership Lab,M  W 2:40 PM-4:00 PM,"Biggerstaff, Sarah",2
+MGT832,Leadership Lab,T  Th 8:30 AM-9:50 AM,"Biggerstaff, Sarah",2
+MGT832,Leadership Lab,T  Th 10:10 AM-11:30 AM,"Biggerstaff, Sarah",2
+MGT841,Corporate Finance: Core Topics,M  W 4:10 PM-5:30 PM,"Clayton, Christopher",2
+MGT846,Introduction to Private Equity,M 4:10 PM-7:10 PM,"Davis, Robert",2
+MGT854,"Behavioral Economics: The Psychology and Behavior of Individuals, Organizations, and Markets",T  Th 10:10 AM-11:30 AM,"Frederick, Shane",2
+MGT854,"Behavioral Economics: The Psychology and Behavior of Individuals, Organizations, and Markets",T  Th 1:00 PM-2:20 PM,"Frederick, Shane",2
+MGT859,Emerging Trends in Digital Advertising,M 4:10 PM-7:10 PM,"Kelman, Leora",2
+MGT864,Behavioral Science for Social Good,M  W 8:30 AM-9:50 AM,"Small, Deborah",2
+MGT864,Behavioral Science for Social Good,M  W 10:10 AM-11:30 AM,"Small, Deborah",2
+MGT871,Financial Reporting,M  W 2:40 PM-4:00 PM,"Raghunandan, Aneesh",2
+MGT875,Service Management,M  W 10:10 AM-11:30 AM,"Fujikawa, Yoshinori",2
+MGT879,Healthcare Operations,T  Th 8:30 AM-9:50 AM,"Pinker, Edieal",2
+MGT881,Power and Purpose,M  W 10:10 AM-11:30 AM,"Levine, Emma",2
+MGT881,Power and Purpose,M  W 1:00 PM-2:20 PM,"Levine, Emma",2
+MGT882,Advanced Negotiations,M 8:50 AM-11:30 AM,"Nalebuff, Barry",1
+MGT882,Advanced Negotiations,T 8:50 AM-11:30 AM,"Nalebuff, Barry",1
+MGT883,Housing Markets,M  W 1:00 PM-2:20 PM,"LaPoint, Cameron",2
+MGT883,Housing Markets,M  W 2:40 PM-4:00 PM,"LaPoint, Cameron",2
+MGT887,Negotiations,M 8:30 AM-11:30 AM,"Frey, Erin",2
+MGT887,Negotiations,T 2:40 PM-5:40 PM,"Frey, Erin",2
+MGT888,The Business of Multicultural Media,W 4:10 PM-7:10 PM,"Walton, Mark",2
+MGT898,Financial Crises: Policy Response,T  Th 2:40 PM-4:00 PM,"Metrick, Andrew",2
+MGT899,Generative AI & Entrepreneurship,M 6:00 PM-9:00 PM,"Ranganathan, Anand",2
+MGT926,"Crypto, SPACs, Climate Change and More: The Role for Asset Managers in an Uncertain Regulatory Environment",Th 8:30 AM-11:30 AM,"Caplan, Lauren",2
+MGT927,Financial Econometrics and Machine Learning,F 8:30 AM-11:30 AM,"Kelly, Bryan",2
+MGT936,Fixed Income Strategies,Th 4:10 PM-7:10 PM,"Brooks, Jordan",2
+MGT937,Hedge Fund Strategies,W 6:00 PM-9:00 PM,"Israel, Ronen",2
+MGT995,Sustainable Innovation in Healthcare,M 4:10 PM-7:10 PM,"Licholai, Greg",2
+MGMT720b,Models of Operations Research and Management,T 8:30 AM-11:30 AM,"Manshadi, Vahideh",0.5
+MGMT721,Modeling Operational Processes,F 9:00 AM-12:00 PM,"Lian, Zhen",0.5
+MGMT739,The Finance of Information,M  W 1:00 PM-2:20 PM,"Ingersoll, Jonathan",0.5
+MGMT756,Empirical Methods of Marketing,F 4:10 PM-7:10 PM,"Sudhir, K.",1
+MGMT759,Moral Consumer Decision Making,W 2:30 PM-5:30 PM,"Small, Deborah",0.5
+MGT421,Innovator,M  W 8:30 AM-9:50 AM,"Botelho, Tristan",2
+MGT421,Innovator,M  W 10:10 AM-11:30 AM,"Botelho, Tristan",2
+MGT421,Innovator,M  W 1:00 PM-2:20 PM,"Botelho, Tristan",2
+MGT421,Innovator,T  Th 8:30 AM-9:50 AM,"Botelho, Tristan",2
+MGT421,Innovator,T  Th 10:10 AM-11:30 AM,"Botelho, Tristan",2
+MGT425,The Global Macroeconomy,T  Th 8:30 AM-9:50 AM,"Donovan, Kevin",2
+MGT425,The Global Macroeconomy,T  Th 10:10 AM-11:30 AM,"Donovan, Kevin",2
+MGT425,The Global Macroeconomy,T  Th 1:00 PM-2:20 PM,"Donovan, Kevin",2
+MGT425,The Global Macroeconomy,T  Th 10:10 AM-11:30 AM,"Schott, Peter",2
+MGT425,The Global Macroeconomy,T  Th 1:00 PM-2:20 PM,"Schott, Peter",2
+MGT430,The Executive,M  W 10:10 AM-11:30 AM,"Dhar, Ravi",2
+MGT430,The Executive,M  W 1:00 PM-2:20 PM,"Hampole, Menaka",2
+MGT430,The Executive,M  W 2:40 PM-4:00 PM,"Novemsky, Nathan",2
+MGT430,The Executive,T  Th 1:00 PM-2:20 PM,"Iwata, Jon",2
+MGT430,The Executive,T  Th 2:40 PM-4:00 PM,"Iwata, Jon",2
+MGT526,Market Failures and Economic Policy in Developing Countries,T  Th 2:40 PM-4:00 PM,"Donovan, Kevin",2
+MGT532,Business Ethics,T  Th 10:10 AM-11:30 AM,"Dana, Jason",2
+MGT532,Business Ethics,M  W 10:10 AM-11:30 AM,"Helgason, Beth Anne",2
+MGT532,Business Ethics,M  W 1:00 PM-2:20 PM,"Helgason, Beth Anne",2
+MGT611,Policy Modeling,M  W 2:40 PM-4:00 PM,"Monachou, Faidra",2
+MGT624,Human Capital Strategy,W 2:40 PM-5:40 PM,"Weisman, Hannah",2
+MGT624,Human Capital Strategy,Th 8:30 AM-11:30 AM,"Weisman, Hannah",2
+MGT630,Games & Information II,T  Th 1:00 PM-2:20 PM,"Polak, Benjamin",2
+MGT641,Behavioral Finance,M  W 10:10 AM-11:30 AM,"Barberis, Nicholas",2
+MGT641,Behavioral Finance,M  W 1:00 PM-2:20 PM,"Barberis, Nicholas",2
+MGT641,Behavioral Finance,M  W 2:40 PM-4:00 PM,"Barberis, Nicholas",2
+MGT668,Narratives in Health Media,W 4:10 PM-7:10 PM,"Hamblin, James",2
+MGT678,Understanding and Reducing Bias in Organizations,T  Th 2:40 PM-4:00 PM,"Owens, Jayanti",2
+MGT678,Understanding and Reducing Bias in Organizations,T  Th 4:10 PM-5:30 PM,"Owens, Jayanti",2
+MGT803,Decision Making with Data,T  Th 2:40 PM-4:00 PM,"Schott, Peter",2
+MGT805,"Fixed Income Securities: Bonds, Swaps, and Derivatives (Part 2)",T  Th 10:10 AM-11:30 AM,"Majd, Saman",2
+MGT811,"Taxes, Business & Strategy",T  Th 10:10 AM-11:30 AM,"Zhang, Frank",2
+MGT812,Financial Statement Analysis,T  Th 1:00 PM-2:20 PM,"Zhang, Frank",2
+MGT816,Accounting for Entrepreneurs,M  W 10:10 AM-11:30 AM,"Barrios, John",2
+MGT828,Creativity & Innovation,W 2:40 PM-5:40 PM,"Feinstein, Jonathan",2
+MGT835,UX Design Fundamentals: Practice & Leadership,T 4:10 PM-7:10 PM,"Falconett, Melissa",2
+MGT836,The Global Macroeconomy,T  Th 8:30 AM-9:50 AM,"Schott, Peter",2
+MGT842,Financing Green Technologies,W 2:40 PM-5:40 PM,"Kauffman, Richard",2
+MGT848,A History of Financial Market Fraud: A Forensic Approach,M 2:40 PM-5:40 PM,"Chanos, Jim",2
+MGT853,AI Strategy & Marketing,T  Th 1:00 PM-2:20 PM,"Kumar, Vineet",2
+MGT853,AI Strategy & Marketing,T  Th 2:40 PM-4:00 PM,"Kumar, Vineet",2
+MGT855,How to Design and Run Business Experiments,T  Th 10:10 AM-11:30 AM,"Frederick, Shane",2
+MGT855,How to Design and Run Business Experiments,T  Th 1:00 PM-2:20 PM,"Frederick, Shane",2
+MGT856,Managing Marketing Programs,W 4:10 PM-7:10 PM,"Hafen, Thomas",2
+MGT858,Database Systems,M  W 1:00 PM-2:20 PM,"Jensen, Kyle",2
+MGT860,Generative AI for Managers,T  Th 8:30 AM-9:50 AM,"Sudhir, K.",2
+MGT863,Political Ethics and Issues for Organizations,M 4:10 PM-7:10 PM,"Kaune, Jason",2
+MGT866,Build a Metaverse Strategy,M 4:10 PM-7:10 PM,"Prescott, Brett",2
+MGT873,Supply Chain Management,M  W 10:10 AM-11:30 AM,"Kim, Sang",2
+MGT873,Supply Chain Management,M  W 1:00 PM-2:20 PM,"Kim, Sang",2
+MGT873,Supply Chain Management,M  W 8:30 AM-9:50 AM,"Kim, Sang",2
+MGT874,Patterns in Entrepreneurship,M  W 10:10 AM-11:30 AM,"Wasserstein, A.J.",2
+MGT885,Commercial Real Estate Investing,M  W 1:00 PM-2:20 PM,"LaPoint, Cameron",2
+MGT885,Commercial Real Estate Investing,M  W 2:40 PM-4:00 PM,"LaPoint, Cameron",2
+MGT887,Negotiations,W 8:30 AM-11:30 AM,"Cusimano, Corey",2
+MGT887,Negotiations,W 2:40 PM-5:40 PM,"Cusimano, Corey",2
+MGT891,Private Capital and Impact Investing,Th 2:40 PM-5:40 PM,"Carter, Susan",2
+MGT892,Introduction to Financial Crisis Communications,T  Th 10:10 AM-11:30 AM,"Wiggins, Rosalind",2
+MGT938,Macroeconomic Strategies,Th 4:10 PM-7:10 PM,"Brooks, Jordan",2
+MGMT701,Seminar In Accounting Rsrch II,T 2:40 PM-5:40 PM,"Barrios, John",1
+MGMT736,Organizations and Management I: Inside Organizations,W 1:00 PM-4:00 PM,"Germano, Adriana",1
+MGMT737,Applied Empirical Methods,T  Th 2:40 PM-4:00 PM,"Goldsmith-Pinkham, Paul",1
+MGMT745,Behavioral Finance,Th 4:10 PM-7:10 PM,"Barberis, Nicholas",1
+MGMT752,Seminar in Quantitative Marketing II,F 8:30 AM-11:30 AM,"Uetake, Kosuke",1
+MGMT758,Foundations of Behavioral Economics,W 1:00 PM-4:00 PM,"Frederick, Shane",1
+MGMT761,Corporate Finance,W 9:00 AM-12:00 PM,"Ma, Song",1
+MGMT781,Accounting/Finance Seminar,F 11:10 AM-12:30 PM,"Fontanier, Paul",1
+MGMT781,Marketing Seminar,Th 11:35 AM-12:50 PM,"Klusowski, Joowon",1
+MGMT781,Organizations & Management Seminar,T 11:35 AM-12:50 PM,"Munguia Gomez, David",1
+MGMT781,Operations Seminar,T 11:45 AM-12:45 PM,"Monachou, Faidra",1
+MGMT782,Ph.D. PreSeminar: Financial Economics,F 9:50 AM-11:00 AM,"Fontanier, Paul",1
+MGMT782,Ph.D. PreSeminar: Marketing,Th 10:10 AM-11:20 AM,"Klusowski, Joowon",1
+MGMT782,Ph.D. PreSeminar: Organizations & Management,T 10:10 AM-11:20 AM,"Munguia Gomez, David",1
+MGMT782,Ph.D. PreSeminar: Operations,M 1:00 PM-4:00 PM,"Monachou, Faidra",1
+MGT503,Everyday Leadership,W 4:10 PM-7:10 PM,"Brooks, Heidi",4
+MGT523,Monetary Policy,M  W 1:00 PM-2:20 PM,"English, William",4
+MGT525,Competitive Strategy,T  Th 8:30 AM-9:50 AM,"Williams, Kevin",4
+MGT525,Competitive Strategy,T  Th 10:10 AM-11:30 AM,"Williams, Kevin",4
+MGT525,Competitive Strategy,T  Th 1:00 PM-2:20 PM,"Williams, Kevin",4
+MGT531,Interpersonal Dynamics,T 2:40 PM-5:40 PM,"Tate, David",4
+MGT540,Personal Finance,T  Th 2:40 PM-4:00 PM,"Choi, James",4
+MGT540,Personal Finance,T  Th 4:10 PM-5:30 PM,"Choi, James",4
+MGT541,Corporate Finance,T 1:00 PM-4:00 PM,"Shue, Kelly",4
+MGT544,Investment Management,T  Th 1:00 PM-2:20 PM,"Goldsmith-Pinkham, Paul",4
+MGT554,AI for Business Decisions,M  W 2:40 PM-4:00 PM,"Wang, Tong",4
+MGT554,AI for Business Decisions,M  W 4:10 PM-5:30 PM,"Wang, Tong",4
+MGT555,Pricing Strategy,T  Th 10:10 AM-11:30 AM,"Ghili, Soheil",4
+MGT555,Pricing Strategy,T  Th 1:00 PM-2:20 PM,"Ghili, Soheil",4
+MGT561,Product Management,T  Th 2:40 PM-4:00 PM,"Burnap, Alex",4
+MGT561,Product Management,T  Th 4:10 PM-5:30 PM,"Burnap, Alex",4
+MGT566,ESG Controller,T  Th 10:10 AM-11:30 AM,"Cort, Todd",4
+MGT575,Generative AI and Social Media,T  Th 2:40 PM-4:00 PM,"Zaman, Tauhid",4
+MGT575,Generative AI and Social Media,T  Th 4:10 PM-5:30 PM,"Zaman, Tauhid",4
+MGT589,Competition Economics & Policy,M  W 8:30 AM-9:50 AM,"Scott Morton, Fiona",4
+MGT623,Strategic Leadership Across Sectors,Th 2:40 PM-5:40 PM,"Sonnenfeld, Jeffrey",4
+MGT626,Leadership Strategies for Music Presenters,W 4:30 PM-9:00 PM,"Blocker, Robert",4
+MGT646,Start-up Founder Practicum,T 11:40 AM-12:50 PM,"McFadden, Jennifer",4
+MGT650,Customer Insights and Applications,W 5:45 PM-7:15 PM,"Ahmed, Treeny",6
+MGT683,Renewable Energy Project Finance,T  Th 9:00 AM-10:20 AM,"Gross, Daniel",4
+MGT686,Strategies for Land Conservation,T 2:30 PM-5:20 PM,"Gentry, Bradford",4
+MGT687,Sustainable Business Capstone Consulting Clinic,T  Th 1:00 PM-2:20 PM,"Boyd, Peter",4
+MGT688,Corporate Sustainability: Strategy and Management,M  W 2:30 PM-3:50 PM,"Esty, Daniel",4
+MGT692,Climate Tech Innovation and Commercialization,T 2:40 PM-5:40 PM,"Speirs, Steph",4
+MGT696,Debating Globalization,M 9:25 AM-11:15 AM,"Zedillo, Ernesto",4
+MGT698,"Healthcare Policy, Finance, and Economics",M  W 10:10 AM-11:30 AM,"Forman, Howie",4
+MGT699,Colloquium in Healthcare Leadership,Th 6:30 PM-7:30 PM,"Forman, Howie",1
+MGT826,Inclusive Economic Development Lab: Special Topics,M  W 1:00 PM-2:20 PM,"Cooney, Kate",4
+MGT845,Portfolio Management in Practice,T  Th 2:40 PM-4:00 PM,"Nalbantoglu, Osman",4
+MGT865,Global Social Entrepreneurship: Brazil,T 4:10 PM-7:10 PM,"Sheldon, Tony",4
+MGT896,America’s Future Role in the Global Economy,Th 1:00 PM-4:00 PM,"Garten, Jeffrey",4
+MGT920,GNAM: Natural Capital: Risks and Opportunities in Global Resource Systems,T  Th 8:30 AM-9:50 AM,"Cort, Todd",4
+MGT921,Asset Management Colloquium,F 12:30 PM-2:30 PM,"Moskowitz, Tobias",2
+MGT928,Asset Management Practical Experience,F 3:00 PM-6:00 PM,"Moskowitz, Tobias",0
+MGT943,Financial Stability Regulation,T  Th 1:00 PM-2:20 PM,"McNamara, Christian",4
+MGT945,Macroprudential Policy II,M  W 2:40 PM-4:00 PM,"Feldberg, Greg",4
+MGT949,Systemic-Risk Colloquium,F 2:00 PM-3:20 PM,"Metrick, Andrew",2
+MGT984,Studies in Grand Strategy I,M  W 1:00 PM-2:15 PM,"Brenes, Michael",4
+MGT985,Navigating Contradiction: International Organizations Operating in China,W 3:20 PM-5:20 PM,"Knup, Elizabeth",4
