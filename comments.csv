@@ -1,0 +1,40 @@
+course_code,comment,Course/Professor
+MGT541,Great class covering major corp finance topics. Prof Shue is engaging with real-world events. Very light workload (3 group HW). TAs review HW before it's due.,Corporate Finance (Kelly Shue)
+MGT841,"Nice professor, more surface-level coverage than Shue. Not as in-depth.",Corporate Finance (Christopher Clayton)
+MGT815,"Builds on accounting but is clear and caring. Focuses on cost allocation and managerial decisions. Minimal heavy math, medium workload. Not just accounting focus on cost allocation and decisions. Engaging, minimal heavy math. Light-medium workload.",Managerial Controls (Thomas Steffen)
+MGT544,"Investor 2.0 style. Pinkham is engaging, sometimes technical. Medium-light workload, good for finance interest.",Investment Management
+MGT635,"Deep dive into deals. Prof has strong industry experience, not overly heavy workload.",Mergers & Acquisitions (Simon Hirst)
+MGT997,"Covers VC/PE lifecycle (fund setup, exits). Interesting cases, some modeling. Useful for investing/founding interests.",Private Equity & Venture Capital (Song Ma)
+MGT847,"Real-world cases, modeling, guest speakers. Intensive but practical.",Private Equity: LBO (Josh Cascade)
+MGT683,Demanding but very practical. Weekly HW with real contracts and modeling. Great for infrastructure/energy finance.,Renewable Energy Project Finance (REPF)
+MGT809,Builds on MMD with simulation in R. Group problem sets. Approach depends on professor but generally approachable.,Advanced Business Analytics
+MGT853,Can feel dry if you know AI basics. Good for newcomers but discussions can be low-energy. Content may vary by semester.,AI Strategy & Marketing
+MGT819,"Uses R, no prior experience needed. Group assignments. Light-medium workload, introduces ML techniques.",Big Data & Customer Analytics (Data Science)
+MGT858,Fast-paced coverage of SQL/NoSQL. Frequent quizzes/HW. Non-techies can manage but expect a setup learning curve. AI tools allowed.,Database Systems (Kyle Jensen)
+MGT425,Teaches frameworks for data interpretation and causal inference. Moderate workload with some assignments.,Decision Making with Data (Peter Schott)
+MGT575,"Highly praised, fun, Python coding. Tauhid is supportive, no prior coding needed. Light-medium workload.",Generative AI & Social Media (Tauhid Zaman)
+MGT656,"Polarizing: some love, some hate. Quizzes each class, coding weekly. Good for hands-on experimenting, can be chaotic.",Management of Software Development (Kyle Jensen)
+MGT561,"Initially repetitive, improves later (retention curves, A/B testing). Group projects. Alex iterates based on feedback.",Product Management (Alex Burnap)
+MGT851,Some find it chaotic. Covers cluster analysis and encourages ChatGPT. Medium workload. May feel redundant if taken other analytics.,Strategic Market Measurement (Sudhir)
+MGT589,"Extension of Competitor. Highly recommended for consulting prep. Medium workload: a few assignments, final project, quizzes. Fiona is widely praised.",Competitive Strategy (esp. w/ Fiona Scott Morton in Spring)
+MGT874,"Case-driven, practical. Participation key. Surveys, midterm, final. Great for various entrepreneurial paths.",Patterns in Entrepreneurship (A.J. Wasserstein)
+MGT671,"Case-driven, practical. Participation key. Surveys, midterm, final. Great for various entrepreneurial paths.",Entrepreneurship Through Acquisition
+MGT631,"Digital health focus, founders join class. Light workload: cases, final presentation. Good for healthcare innovation interest.",Public Health Entrepreneurship (Chahine)
+MGT873,More qualitative than expected. Provides good overview but not highly quantitative. Medium workload.,Supply Chain Management (Sang Kim)
+MGT503,"Builds on IPD concepts. Focus on personal leadership style. Medium participation, reflection required.",Everyday Leadership (Heidi Brooks)
+MGT624,"Workforce 2.0, practical people management. Medium workload. Opinions vary; some find it repetitive.",Human Capital Strategy (Jim Baron)
+MGT531,Intense trust-building and feedback exercises. Significant time/emotional commitment. Highly recommended for personal growth.,Interpersonal Dynamics (IPD)
+MGT832,"Focus on coaching and immunity to change. Less intense than IPD, builds personal leadership skills.",Leadership Lab
+MGT537,Data-driven econ approach to inequality. Manageable assignments. Great for those interested in societal issues.,Inequality & Social Mobility (Zimmerman)
+MGT526,"Highly regarded. Understand global growth issues. Short assignments, approachable.",Market Failures & Economic Policy in Developing Countries (Donovan)
+MGT536,Good intro to urban planning and poverty. Light-medium workload.,Urban Poverty & Economic Development
+MGT995,"Digital health/medtech focus, guest speakers. Very light workload. Interesting trends in healthcare.",Sustainable Innovation in Healthcare (Licholai)
+MGT668,"Focus on communication, storytelling, combating misinformation. Light workload, creative writing.",Narratives in Health Media (Hamblin)
+MGT532,"Light workload: short case posts, a few short papers. Discussion-based. Quality depends on professor; Dana/Cusimano praised, Marciano less so.",Business Ethics
+MGT863,"Explores lobbying, corporate political actions, moral dimensions. Unique perspective.",Political Ethics & Issues for Organizations
+MGT540,"Economic lens on personal finance advice. Math/Excel heavy problem sets. No exams, final project. Interesting insights.",Personal Finance (James Choi)
+MGT896,"Economic policy + international relations, guest speakers, moderate readings. 4 hrs/week prep.",America's Future Role in the Global Economy (Garten)
+MGT890,Must-take for understanding monetary/fiscal policy. Heavier workload but worth it. Top-tier instructors.,The Global Financial Crisis (Metrick & Geithner)
+MGT850,Lit review of OB psych studies. Some found it dry. Light-medium workload.,Science and Experiences of Well-Being (Gal)
+MGT823,"Focus on microfinance, insurance in developing contexts. Low-medium workload, eye-opening data.",Insurance and Finance for the Poor
+MGT536,"As above, encourages cross-discipline thinking, light-medium work.",Urban Poverty & Economic Development
