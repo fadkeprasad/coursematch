@@ -14,6 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "types": ["react/next", "react-dom/next", "jest"], 
     // "jest" is crucial so TS sees the "test" globals.
 

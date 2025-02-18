@@ -1,7 +1,8 @@
+
 // src/firebase.ts
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import {initializeApp,getApps,getApp} from "firebase/app";
+import {getAuth} from "firebase/auth";
+import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDlQb7bV2Aq8S1BpJMCe5-HmrsH815qF4g",
@@ -13,6 +14,16 @@ const firebaseConfig = {
   measurementId: "G-CYYT3LSWCS"
 };
 
-const app = initializeApp(firebaseConfig);
+// Only initialize the app once (avoid the "duplicate app" error).
+let app;
+if (!getApps().length) {
+  app = initializeApp(firebaseConfig);
+} else {
+  app = getApp();
+}
+
+// Export whatever Firebase services you need:
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db=getFirestore(app);
+// export const db = getFirestore(app); // if using Firestore
+// export const analytics = getAnalytics(app); // etc.

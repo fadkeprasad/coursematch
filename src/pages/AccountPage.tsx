@@ -1,10 +1,10 @@
 // src/pages/AccountPage.tsx
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../firebase';
 import { signOut, deleteUser, updatePassword } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import './styles/AccountPage.css';
 
 const AccountPage: React.FC = () => {
   const [user] = useAuthState(auth);
@@ -12,25 +12,21 @@ const AccountPage: React.FC = () => {
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
 
-  // Sign out user
   const handleSignOut = async () => {
     await signOut(auth);
     navigate('/');
   };
 
-  // Delete user (requires recent auth, might throw an error if not recently re-authenticated)
   const handleDeleteAccount = async () => {
     if (!user) return;
     try {
       await deleteUser(user);
-      // If successful, go to homepage
       navigate('/');
     } catch (err: any) {
       setError('Error deleting account: ' + err.message);
     }
   };
 
-  // Update user’s password
   const handleUpdatePassword = async () => {
     if (!user) return;
     try {
@@ -43,12 +39,12 @@ const AccountPage: React.FC = () => {
   };
 
   return (
-    <div style={{ margin: '20px' }}>
+    <div className="account-container">
       <h2>Account Options</h2>
       {user ? (
         <>
-          <p>Signed in as: {user.email}</p>
-          <button onClick={handleSignOut}>Sign Out</button>
+          <p>Signed in as: <strong>{user.email}</strong></p>
+          <button className="btn btn-primary" onClick={handleSignOut}>Sign Out</button>
           <hr />
 
           <h3>Change Password</h3>
@@ -57,20 +53,19 @@ const AccountPage: React.FC = () => {
             placeholder="New Password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+            className="input-field"
           />
-          <button onClick={handleUpdatePassword}>Update Password</button>
+          <button className="btn btn-secondary" onClick={handleUpdatePassword}>Update Password</button>
           <hr />
 
-          <h3>Danger Zone</h3>
-          <button onClick={handleDeleteAccount} style={{ color: 'red' }}>
-            Delete Account
-          </button>
-          <p style={{ color: 'red' }}>{error}</p>
+          <h3 className="danger">Danger Zone</h3>
+          <button className="btn btn-danger" onClick={handleDeleteAccount}>Delete Account</button>
+          {error && <p className="error-text">{error}</p>}
         </>
       ) : (
         <>
           <p>No user is signed in.</p>
-          <Link to="/signin">Sign In</Link>
+          <Link to="/welcomepage" className="link">Sign In</Link>
         </>
       )}
     </div>

@@ -3,8 +3,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './pages/WelcomePage';
-import SignUpPage from './pages/SignUpPage';
-import SignInPage from './pages/SignInPage';
 import HomePage from './pages/HomePage';
 import CourseDetailsPage from './pages/CourseDetailsPage';
 import AccountPage from './pages/AccountPage';
@@ -16,10 +14,6 @@ function App() {
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<WelcomePage />} />
-
-        {/* Auth Pages */}
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/signin" element={<SignInPage />} />
 
         {/* Authenticated Pages */}
         <Route path="/home" element={<HomePage />} />
