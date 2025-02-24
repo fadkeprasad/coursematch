@@ -1,40 +1,49 @@
 course_code,comment,Course/Professor
-MGT541,Great class covering major corp finance topics. Prof Shue is engaging with real-world events. Very light workload (3 group HW). TAs review HW before it's due.,Corporate Finance (Kelly Shue)
-MGT841,"Nice professor, more surface-level coverage than Shue. Not as in-depth.",Corporate Finance (Christopher Clayton)
-MGT815,"Builds on accounting but is clear and caring. Focuses on cost allocation and managerial decisions. Minimal heavy math, medium workload. Not just accounting focus on cost allocation and decisions. Engaging, minimal heavy math. Light-medium workload.",Managerial Controls (Thomas Steffen)
-MGT544,"Investor 2.0 style. Pinkham is engaging, sometimes technical. Medium-light workload, good for finance interest.",Investment Management
-MGT635,"Deep dive into deals. Prof has strong industry experience, not overly heavy workload.",Mergers & Acquisitions (Simon Hirst)
-MGT997,"Covers VC/PE lifecycle (fund setup, exits). Interesting cases, some modeling. Useful for investing/founding interests.",Private Equity & Venture Capital (Song Ma)
-MGT847,"Real-world cases, modeling, guest speakers. Intensive but practical.",Private Equity: LBO (Josh Cascade)
-MGT683,Demanding but very practical. Weekly HW with real contracts and modeling. Great for infrastructure/energy finance.,Renewable Energy Project Finance (REPF)
-MGT809,Builds on MMD with simulation in R. Group problem sets. Approach depends on professor but generally approachable.,Advanced Business Analytics
-MGT853,Can feel dry if you know AI basics. Good for newcomers but discussions can be low-energy. Content may vary by semester.,AI Strategy & Marketing
-MGT819,"Uses R, no prior experience needed. Group assignments. Light-medium workload, introduces ML techniques.",Big Data & Customer Analytics (Data Science)
-MGT858,Fast-paced coverage of SQL/NoSQL. Frequent quizzes/HW. Non-techies can manage but expect a setup learning curve. AI tools allowed.,Database Systems (Kyle Jensen)
-MGT425,Teaches frameworks for data interpretation and causal inference. Moderate workload with some assignments.,Decision Making with Data (Peter Schott)
-MGT575,"Highly praised, fun, Python coding. Tauhid is supportive, no prior coding needed. Light-medium workload.",Generative AI & Social Media (Tauhid Zaman)
-MGT656,"Polarizing: some love, some hate. Quizzes each class, coding weekly. Good for hands-on experimenting, can be chaotic.",Management of Software Development (Kyle Jensen)
-MGT561,"Initially repetitive, improves later (retention curves, A/B testing). Group projects. Alex iterates based on feedback.",Product Management (Alex Burnap)
-MGT851,Some find it chaotic. Covers cluster analysis and encourages ChatGPT. Medium workload. May feel redundant if taken other analytics.,Strategic Market Measurement (Sudhir)
-MGT589,"Extension of Competitor. Highly recommended for consulting prep. Medium workload: a few assignments, final project, quizzes. Fiona is widely praised.",Competitive Strategy (esp. w/ Fiona Scott Morton in Spring)
-MGT874,"Case-driven, practical. Participation key. Surveys, midterm, final. Great for various entrepreneurial paths.",Patterns in Entrepreneurship (A.J. Wasserstein)
-MGT671,"Case-driven, practical. Participation key. Surveys, midterm, final. Great for various entrepreneurial paths.",Entrepreneurship Through Acquisition
-MGT631,"Digital health focus, founders join class. Light workload: cases, final presentation. Good for healthcare innovation interest.",Public Health Entrepreneurship (Chahine)
-MGT873,More qualitative than expected. Provides good overview but not highly quantitative. Medium workload.,Supply Chain Management (Sang Kim)
-MGT503,"Builds on IPD concepts. Focus on personal leadership style. Medium participation, reflection required.",Everyday Leadership (Heidi Brooks)
-MGT624,"Workforce 2.0, practical people management. Medium workload. Opinions vary; some find it repetitive.",Human Capital Strategy (Jim Baron)
-MGT531,Intense trust-building and feedback exercises. Significant time/emotional commitment. Highly recommended for personal growth.,Interpersonal Dynamics (IPD)
-MGT832,"Focus on coaching and immunity to change. Less intense than IPD, builds personal leadership skills.",Leadership Lab
-MGT537,Data-driven econ approach to inequality. Manageable assignments. Great for those interested in societal issues.,Inequality & Social Mobility (Zimmerman)
-MGT526,"Highly regarded. Understand global growth issues. Short assignments, approachable.",Market Failures & Economic Policy in Developing Countries (Donovan)
-MGT536,Good intro to urban planning and poverty. Light-medium workload.,Urban Poverty & Economic Development
-MGT995,"Digital health/medtech focus, guest speakers. Very light workload. Interesting trends in healthcare.",Sustainable Innovation in Healthcare (Licholai)
-MGT668,"Focus on communication, storytelling, combating misinformation. Light workload, creative writing.",Narratives in Health Media (Hamblin)
-MGT532,"Light workload: short case posts, a few short papers. Discussion-based. Quality depends on professor; Dana/Cusimano praised, Marciano less so.",Business Ethics
-MGT863,"Explores lobbying, corporate political actions, moral dimensions. Unique perspective.",Political Ethics & Issues for Organizations
-MGT540,"Economic lens on personal finance advice. Math/Excel heavy problem sets. No exams, final project. Interesting insights.",Personal Finance (James Choi)
-MGT896,"Economic policy + international relations, guest speakers, moderate readings. 4 hrs/week prep.",America's Future Role in the Global Economy (Garten)
-MGT890,Must-take for understanding monetary/fiscal policy. Heavier workload but worth it. Top-tier instructors.,The Global Financial Crisis (Metrick & Geithner)
-MGT850,Lit review of OB psych studies. Some found it dry. Light-medium workload.,Science and Experiences of Well-Being (Gal)
+MGT425,Teaches frameworks for data interpretation and causal inference. Moderate workload with some assignments.,Corporate Finance (Kelly Shue)
+MGT503,"Builds on IPD concepts. Focus on personal leadership style. Medium participation, reflection required.",Corporate Finance (Christopher Clayton)
+MGT525,"This course involves extensive case-based discussions and some cold calling. It is recommended for students who enjoy strategy discussions. While there is a textbook, past students noted that it is not essential, as the cases provide the primary learning material.",Managerial Controls (Thomas Steffen)
+MGT526,"Highly regarded. Understand global growth issues. Short assignments, approachable.",Investment Management
+MGT531,"Intense trust-building and feedback exercises. Significant time/emotional commitment. Highly recommended for personal growth. This course is highly valued but demands a significant time commitment, including a retreat and extended evening sessions.  However, those who took it generally found it rewarding, as it deepened their understanding of interpersonal relationships and emotional intelligence.",Mergers & Acquisitions (Simon Hirst)
+MGT532,"Light workload: short case posts, a few short papers. Discussion-based. Quality depends on professor; Dana/Cusimano praised, Marciano less so.",Private Equity: LBO (Josh Cascade)
+MGT536,Good intro to urban planning and poverty. Light-medium workload.,Renewable Energy Project Finance (REPF)
+MGT537,Data-driven econ approach to inequality. Manageable assignments. Great for those interested in societal issues.,AI Strategy & Marketing
+MGT538,"The application process for this course was discussed frequently, indicating that demand is high. Students seemed unsure about whether dropping the course would result in penalties, suggesting that those interested should carefully check policies before enrolling.",Big Data & Customer Analytics (Data Science)
+MGT540,"Economic lens on personal finance advice. Math/Excel heavy problem sets. No exams, final project. Interesting insights.",Database Systems (Kyle Jensen)
+MGT541,"Great class covering major corp finance topics. Prof Shue is engaging with real-world events. Very light workload (3 group HW). TAs review HW before it's due. Students noted differences in how the course is structured between professors. Kelly Shue's version is more problem-set-oriented, while Heather Tookes full-semester version is more case-based and covers additional topics. Students without a finance background found both versions manageable.",Decision Making with Data (Peter Schott)
+MGT544,"Investor 2.0 style. Pinkham is engaging, sometimes technical. Medium-light workload, good for finance interest.",Management of Software Development (Kyle Jensen)
+MGT553,"This course receives positive feedback, with students appreciating Taly Reich's teaching style. The focus is on effective presentation delivery, and it provides students with practical tools to enhance their communication skills. The workload is not heavy, making it a great course for those looking to balance challenging electives. However, demand for the course is high, and clearing prices have varied across rounds.",Product Management (Alex Burnap)
+MGT561,"Initially repetitive, improves later (retention curves, A/B testing). Group projects. Alex iterates based on feedback.",Strategic Market Measurement (Sudhir)
+MGT575,"Highly praised, fun, Python coding. Tauhid is supportive, no prior coding needed. Light-medium workload. While there were questions about the syllabus, it appears to be a newer offering. Some students were interested in digital marketing-related courses, but no strong opinions were shared about this one specifically.",Competitive Strategy (esp. w/ Fiona Scott Morton in Spring)
+MGT589,"Extension of Competitor. Highly recommended for consulting prep. Medium workload: a few assignments, final project, quizzes. Fiona is widely praised.",Entrepreneurship Through Acquisition
+MGT623,"This course is competitive, with a clearing price of 155, and requires additional applications. It is recommended for students interested in leadership and strategy across different industries. The course features case studies and guest lectures, contributing to a well-rounded learning experience.",Public Health Entrepreneurship (Chahine)
+MGT624,"Workforce 2.0, practical people management. Medium workload. Opinions vary; some find it repetitive. This course covers various HR and management strategies, including handling layoffs. The professor was described as engaging, and students appreciated the case studies and discussions.",Supply Chain Management (Sang Kim)
+MGT631,"Digital health focus, founders join class. Light workload: cases, final presentation. Good for healthcare innovation interest.",Human Capital Strategy (Jim Baron)
+MGT635,"Deep dive into deals. Prof has strong industry experience, not overly heavy workload.",Interpersonal Dynamics (IPD)
+MGT641,"Students noted that Behavioral Finance focuses on investor psychology and market behavior, while Behavioral Economics is broader, covering the psychological effects of economic decisions on individuals and organizations. Both courses are recommended, with Behavioral Finance being more specialized.",Leadership Lab
+MGT656,"Polarizing: some love, some hate. Quizzes each class, coding weekly. Good for hands-on experimenting, can be chaotic.",Inequality & Social Mobility (Zimmerman)
+MGT668,"Focus on communication, storytelling, combating misinformation. Light workload, creative writing.",Market Failures & Economic Policy in Developing Countries (Donovan)
+MGT671,"Both courses are quite competitive in the bidding process, with clearing prices reflecting their popularity (ETA - 211; Leading Small & Medium - 183). These courses seem to attract students interested in practical business applications and entrepreneurship. Reviews suggest they provide valuable insights into acquisition strategies and management techniques for small and medium enterprises.",Sustainable Innovation in Healthcare (Licholai)
+MGT674,"Both courses are quite competitive in the bidding process, with clearing prices reflecting their popularity (ETA - 211; Leading Small & Medium - 183). These courses seem to attract students interested in practical business applications and entrepreneurship. Reviews suggest they provide valuable insights into acquisition strategies and management techniques for small and medium enterprises.",Narratives in Health Media (Hamblin)
+MGT683,Demanding but very practical. Weekly HW with real contracts and modeling. Great for infrastructure/energy finance.,Business Ethics
+MGT686,"This course received strong recommendations, particularly from students with a passion for conservation. Each week covers a different aspect of conservation, including finance, partnerships, and public engagement. A consulting project with a local conservation group is a highlight. The professor, Brad Gentry, is well-respected, but students were advised that some course load may be shared with another instructor due to his medical recovery.",Political Ethics & Issues for Organizations
+MGT803,"This course cleared for a high price (269), suggesting strong demand. Some students questioned the course description, as it seemed disconnected from the course title. The workload is substantial, but it offers a rigorous exploration of data-driven decision-making, making it valuable for students interested in analytics.",Personal Finance (James Choi)
+MGT809,Builds on MMD with simulation in R. Group problem sets. Approach depends on professor but generally approachable.,America's Future Role in the Global Economy (Garten)
+MGT815,"Builds on accounting but is clear and caring. Focuses on cost allocation and managerial decisions. Minimal heavy math, medium workload. Not just accounting focus on cost allocation and decisions. Engaging, minimal heavy math. Light-medium workload.",The Global Financial Crisis (Metrick & Geithner)
+MGT819,"Uses R, no prior experience needed. Group assignments. Light-medium workload, introduces ML techniques.",Science and Experiences of Well-Being (Gal)
 MGT823,"Focus on microfinance, insurance in developing contexts. Low-medium workload, eye-opening data.",Insurance and Finance for the Poor
-MGT536,"As above, encourages cross-discipline thinking, light-medium work.",Urban Poverty & Economic Development
+MGT832,"Focus on coaching and immunity to change. Less intense than IPD, builds personal leadership skills. Students generally recommend this course, highlighting Sarah Biggerstaff as an amazing professor. The course has a strong focus on coaching skills and 'Immunity to Change' frameworks. There is some overlap with Interpersonal Dynamics (IPD), but students believe it is a valuable follow-up course. The workload appears to be manageable, and past students have found it to be a meaningful experience.",Urban Poverty & Economic Development
+MGT841,"Nice professor, more surface-level coverage than Shue. Not as in-depth.",
+MGT847,"Real-world cases, modeling, guest speakers. Intensive but practical.",
+MGT850,Lit review of OB psych studies. Some found it dry. Light-medium workload.,
+MGT851,Some find it chaotic. Covers cluster analysis and encourages ChatGPT. Medium workload. May feel redundant if taken other analytics.,
+MGT853,Can feel dry if you know AI basics. Good for newcomers but discussions can be low-energy. Content may vary by semester.,
+MGT854,"Students noted that Behavioral Finance focuses on investor psychology and market behavior, while Behavioral Economics is broader, covering the psychological effects of economic decisions on individuals and organizations. Both courses are recommended, with Behavioral Finance being more specialized.",
+MGT858,Fast-paced coverage of SQL/NoSQL. Frequent quizzes/HW. Non-techies can manage but expect a setup learning curve. AI tools allowed.,
+MGT863,"Explores lobbying, corporate political actions, moral dimensions. Unique perspective.",
+MGT873,More qualitative than expected. Provides good overview but not highly quantitative. Medium workload.,
+MGT874,"Case-driven, practical. Participation key. Surveys, midterm, final. Great for various entrepreneurial paths.",
+MGT890,Must-take for understanding monetary/fiscal policy. Heavier workload but worth it. Top-tier instructors.,
+MGT891,"This course received a strong recommendation, with one student calling it their favorite course at SOM. It focuses on private capital's role in impact investing and includes practical applications.",
+MGT896,"Economic policy + international relations, guest speakers, moderate readings. 4 hrs/week prep. Students praised Professor Jeffrey Garten's engaging teaching style and his ability to tie discussions to current events. The workload includes readings and discussions.",
+MGT995,"Digital health/medtech focus, guest speakers. Very light workload. Interesting trends in healthcare.",
+MGT997,"Covers VC/PE lifecycle (fund setup, exits). Interesting cases, some modeling. Useful for investing/founding interests.",

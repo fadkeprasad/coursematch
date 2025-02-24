@@ -1,7 +1,7 @@
 // src/pages/CourseDetailsPage.tsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { collection, getDocs, addDoc, Timestamp, doc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, addDoc, updateDoc, doc, getDoc, query, where, Timestamp, setDoc } from 'firebase/firestore';
 import { db, auth } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './styles/CourseDetailsPage.css';
@@ -9,6 +9,7 @@ import './styles/CourseDetailsPage.css';
 interface Comment {
   id?: string;
   userId?: string;
+  username?: string;
   text?: string;
   createdAt?: any;
 }
@@ -17,19 +18,20 @@ interface CourseDetails {
   courseNumber: string;
   courseTitle: string;
   faculty: string;
-  desc?: string; // Added description field
-  slackComments?: string[]; // Only show on this page
+  desc?: string;
+  slackComments?: string[];
 }
 
 const CourseDetailsPage: React.FC = () => {
   const { courseId } = useParams();
   const [user] = useAuthState(auth);
   const [comments, setComments] = useState<Comment[]>([]);
-  const [newComment, setNewComment] = useState('');
+  const [editComment, setEditComment] = useState<string>('');
+  const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
   const [courseDetails, setCourseDetails] = useState<CourseDetails | null>(null);
-  const [usernames, setUsernames] = useState<Record<string, string>>({}); // Map of userId to username
+  const [userRating, setUserRating] = useState<number | null>(null);
+  const [ratingCount, setRatingCount] = useState<number>(0);
 
-  // Fetch course details
   useEffect(() => {
     const fetchCourseDetails = async () => {
       if (!courseId) return;
@@ -39,68 +41,58 @@ const CourseDetailsPage: React.FC = () => {
 
       if (courseDocSnap.exists()) {
         setCourseDetails(courseDocSnap.data() as CourseDetails);
+        setRatingCount(courseDocSnap.data().ratingCount || 0);
+      }
+
+      if (user) {
+        const userRatingDoc = await getDoc(doc(db, 'ratings', `${user.uid}_${courseId}`));
+        if (userRatingDoc.exists()) {
+          setUserRating(userRatingDoc.data().rating);
+        }
       }
     };
 
-    fetchCourseDetails();
-  }, [courseId]);
-
-  // Fetch comments
-  useEffect(() => {
     const fetchComments = async () => {
       if (!courseId) return;
 
       const commentsRef = collection(db, 'courses', courseId, 'comments');
       const snapshot = await getDocs(commentsRef);
 
-      const fetchedComments = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as Comment[];
+      const fetchedComments = await Promise.all(snapshot.docs.map(async (docSnapshot) => {
+        const data = docSnapshot.data() as Comment;
+        if (data.userId) {
+          const userDocRef = doc(db, 'users', data.userId);
+          const userDocSnapshot = await getDoc(userDocRef);
+
+          if (userDocSnapshot.exists()) {
+            const userData = userDocSnapshot.data() as { username: string };
+            data.username = userData.username || 'Anonymous';
+          } else {
+            data.username = 'Anonymous';
+          }
+        }
+        return { id: docSnapshot.id, ...data };
+      }));
 
       setComments(fetchedComments);
     };
 
+    fetchCourseDetails();
     fetchComments();
-  }, [courseId]);
+  }, [courseId, user]);
 
-  // Fetch usernames for each comment
-  useEffect(() => {
-    const fetchUsernames = async () => {
-      const userIds = [...new Set(comments.map((comment) => comment.userId))]; // Get unique userIds
-      const fetchedUsernames: Record<string, string> = {};
-
-      for (const userId of userIds) {
-        if (!userId) continue;
-
-        const userDocRef = doc(db, 'users', userId);
-        const userDoc = await getDoc(userDocRef);
-
-        if (userDoc.exists()) {
-          fetchedUsernames[userId] = userDoc.data()?.username || 'Anonymous';
-        }
-      }
-
-      setUsernames(fetchedUsernames);
-    };
-
-    fetchUsernames();
-  }, [comments]);
-
-  // Add a new comment
   const handleAddComment = async () => {
-    if (!user || !courseId) return;
+    if (!user || !courseId || !editComment.trim()) return;
 
     const commentsRef = collection(db, 'courses', courseId, 'comments');
     await addDoc(commentsRef, {
       userId: user.uid,
-      text: newComment,
+      text: editComment.trim(),
       createdAt: Timestamp.now(),
     });
 
-    setNewComment('');
-
-    // Fetch the updated comments
+    setEditComment('');
+    setEditingCommentId(null);
     const snapshot = await getDocs(commentsRef);
     const fetchedComments = snapshot.docs.map((doc) => ({
       id: doc.id,
@@ -110,64 +102,58 @@ const CourseDetailsPage: React.FC = () => {
     setComments(fetchedComments);
   };
 
-  if (!courseId) return <p>No course specified</p>;
-
   return (
     <div className="course-details-container">
       <h2>
         Course Details: {courseDetails?.courseNumber} - {courseDetails?.courseTitle}
       </h2>
-      <p>
+      <p style={{ marginBottom: '20px' }}>
         <strong>Faculty:</strong> {courseDetails?.faculty || 'Not Available'}
       </p>
       <p>
         <strong>Description:</strong> {courseDetails?.desc || 'No description available.'}
       </p>
 
-      {courseDetails?.slackComments && (
-        <div>
-          <h3>Slack Comments</h3>
-          <ul>
-            {courseDetails.slackComments.map((comment, index) => (
-              <li key={index}>{comment}</li>
-            ))}
-          </ul>
+      <div style={{ marginTop: '20px' }}>
+        <h3>Your Rating</h3>
+        <div style={{ marginBottom: '10px' }}>
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span
+              key={star}
+              style={{ color: userRating && star <= userRating ? 'gold' : 'gray', cursor: 'pointer', fontSize: '24px', marginRight: '5px' }}
+            >
+              ★
+            </span>
+          ))}
         </div>
-      )}
+      </div>
 
-      <Link to="/home" className="link">
-        &larr; Back to Home
-      </Link>
+      <Link to="/home" className="link">&larr; Back to Home</Link>
 
-      <h3>Comments</h3>
+      <h3 style={{ marginTop: '20px' }}>Comments</h3>
       <div className="comments-section">
         {comments.map((comment) => (
           <div key={comment.id} className="comment">
             <p>{comment.text}</p>
-            {comment.userId && (
-              <small>
-                User: {usernames[comment.userId] || 'Anonymous'}
-              </small>
+            <small>By: {comment.username} <span style={{ marginLeft: '8px' }}></span></small>
+            {user && user.uid === comment.userId && (
+              <button style={{ marginLeft: '10px' }}>Edit</button>
             )}
           </div>
         ))}
       </div>
 
-      {user ? (
+      {user && (
         <div className="add-comment">
           <textarea
             rows={3}
             placeholder="Add your comment..."
-            value={newComment}
-            onChange={(e) => setNewComment(e.target.value)}
+            value={editComment}
+            onChange={(e) => setEditComment(e.target.value)}
             className="input-field"
           />
-          <button className="btn btn-primary" onClick={handleAddComment}>
-            Submit
-          </button>
+          <button className="btn btn-primary" onClick={handleAddComment} style={{ marginTop: '10px' }}>Submit</button>
         </div>
-      ) : (
-        <p>You must be signed in to add a comment.</p>
       )}
     </div>
   );

@@ -10,12 +10,14 @@ interface Course {
   id: string;
   courseNumber: string;
   courseTitle: string;
-  daytime: string;
   faculty1: string;
+  daytime: string;
   units: number;
   category: string;
   stem: string;
   ldr: string;
+  averageRating?: number;
+  ratingCount?: number;
 }
 
 const HomePage: React.FC = () => {
@@ -25,13 +27,14 @@ const HomePage: React.FC = () => {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
   const [username, setUsername] = useState<string | null>(null);
 
-  // Filters state
   const [filters, setFilters] = useState({
-    daytime: '',
+    units: '',
     category: '',
     stem: '',
     ldr: '',
+    daytime: '',
   });
+  const [sortBy, setSortBy] = useState<string>('');
 
   useEffect(() => {
     if (!user) {
@@ -41,7 +44,6 @@ const HomePage: React.FC = () => {
 
     const fetchData = async () => {
       try {
-        // Fetch the username from Firestore
         const userDocRef = doc(db, 'users', user.uid);
         const userDoc = await getDoc(userDocRef);
         const fetchedUsername = userDoc.exists()
@@ -49,7 +51,6 @@ const HomePage: React.FC = () => {
           : user.email;
         setUsername(fetchedUsername);
 
-        // Fetch courses
         const courseCollection = collection(db, 'courses');
         const snapshot = await getDocs(courseCollection);
         const data: Course[] = snapshot.docs.map((doc) => ({
@@ -57,7 +58,7 @@ const HomePage: React.FC = () => {
           ...doc.data(),
         })) as Course[];
         setCourses(data);
-        setFilteredCourses(data); // Initialize with all courses
+        setFilteredCourses(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -66,90 +67,81 @@ const HomePage: React.FC = () => {
     fetchData();
   }, [user, navigate]);
 
-  // Update filtered courses whenever filters change
   useEffect(() => {
-    const applyFilters = () => {
-      let filtered = courses;
+    let result = [...courses];
 
-      if (filters.daytime) {
-        filtered = filtered.filter((course) =>
-          course.daytime.toLowerCase().includes(filters.daytime.toLowerCase())
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value) {
+        result = result.filter((course) =>
+          course[key as keyof Course]?.toString().toLowerCase().includes(value.toLowerCase())
         );
       }
+    });
 
-      if (filters.category) {
-        filtered = filtered.filter((course) =>
-          course.category.toLowerCase().includes(filters.category.toLowerCase())
-        );
-      }
+    if (sortBy === 'ratings') {
+      result.sort((a, b) => (b.averageRating || 0) - (a.averageRating || 0));
+    }
 
-      if (filters.stem) {
-        filtered = filtered.filter((course) =>
-          course.stem.toLowerCase() === filters.stem.toLowerCase()
-        );
-      }
+    setFilteredCourses(result);
+  }, [filters, courses, sortBy]);
 
-      if (filters.ldr) {
-        filtered = filtered.filter((course) =>
-          course.ldr.toLowerCase() === filters.ldr.toLowerCase()
-        );
-      }
-
-      setFilteredCourses(filtered);
-    };
-
-    applyFilters();
-  }, [filters, courses]);
-
-  // Handle filter changes
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [name]: value,
-    }));
+    setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
   };
 
   return (
     <div className="homepage-container">
-      <h2>Welcome, <strong>{username}</strong></h2>
-      <div className="nav-links">
-        <Link to="/account" className="link">Account</Link>
-        <Link to="/" className="link">Sign Out</Link>
+      <div className="navbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
+        <img src="/images/coursematch_logo.png" alt="CourseMatch Logo" className="logo" />
+        <div className="nav-links" style={{ display: 'flex', gap: '15px', marginLeft: 'auto' }}>
+          <Link to="/account" className="link">{username}</Link>
+          <Link to="/" className="link">Sign Out</Link>
+        </div>
       </div>
 
       <h3>All Courses</h3>
 
-      {/* Filters Section */}
       <div className="filters-container">
-        <select name="daytime" value={filters.daytime} onChange={handleFilterChange}>
-          <option value="">Filter by Day/Time</option>
-          {Array.from(new Set(courses.map((course) => course.daytime))).map((daytime) => (
-            <option key={daytime} value={daytime}>{daytime}</option>
+        <select name="units" value={filters.units} onChange={handleFilterChange}>
+          <option value="">Filter by Units</option>
+          {[...new Set(courses.map(course => course.units))].map(unit => (
+            <option key={unit} value={unit}>{unit}</option>
           ))}
         </select>
 
         <select name="category" value={filters.category} onChange={handleFilterChange}>
           <option value="">Filter by Category</option>
-          {Array.from(new Set(courses.map((course) => course.category))).map((category) => (
+          {[...new Set(courses.map(course => course.category))].map(category => (
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
 
         <select name="stem" value={filters.stem} onChange={handleFilterChange}>
           <option value="">Filter by STEM</option>
-          <option value="Y">Y</option>
-          <option value="N">N</option>
+          <option value="Y">Yes</option>
+          <option value="N">No</option>
         </select>
 
         <select name="ldr" value={filters.ldr} onChange={handleFilterChange}>
           <option value="">Filter by Leadership</option>
-          <option value="Y">Y</option>
-          <option value="N">N</option>
+          <option value="Y">Yes</option>
+          <option value="N">No</option>
+        </select>
+
+        <select name="daytime" value={filters.daytime} onChange={handleFilterChange}>
+          <option value="">Filter by Day/Time</option>
+          {[...new Set(courses.map(course => course.daytime))].map(daytime => (
+            <option key={daytime} value={daytime}>{daytime}</option>
+          ))}
+        </select>
+
+        <select name="sortBy" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+          <option value="">Sort by</option>
+          <option value="ratings">Ratings</option>
         </select>
       </div>
 
-      {/* Courses Table */}
       <table className="courses-table">
         <thead>
           <tr>
@@ -161,6 +153,7 @@ const HomePage: React.FC = () => {
             <th>Category</th>
             <th>STEM</th>
             <th>Leadership</th>
+            <th>Ratings</th>
           </tr>
         </thead>
         <tbody>
@@ -178,6 +171,11 @@ const HomePage: React.FC = () => {
               <td>{course.category}</td>
               <td>{course.stem}</td>
               <td>{course.ldr}</td>
+              <td>
+                {course.averageRating
+                  ? `${Math.round(course.averageRating)} / 5 (${course.ratingCount} reviews)`
+                  : 'No ratings'}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -187,3 +185,6 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
+
+// The CourseDetailsPage.tsx file follows the same design changes with the navbar, username, and logo at the top, and consistent font size.
