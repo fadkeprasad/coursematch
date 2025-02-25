@@ -172,8 +172,8 @@ const HomePage: React.FC = () => {
               <td>{course.stem}</td>
               <td>{course.ldr}</td>
               <td>
-                {course.averageRating
-                  ? `${Math.round(course.averageRating)} / 5 (${course.ratingCount} reviews)`
+                  {course.averageRating !== undefined && course.ratingCount
+                  ? `${course.averageRating.toFixed(1)} / 5 (${course.ratingCount} reviews)`
                   : 'No ratings'}
               </td>
             </tr>
