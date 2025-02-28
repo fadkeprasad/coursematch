@@ -8,13 +8,11 @@ import './styles/HomePage.css';
 
 interface Course {
   id: string;
-  courseNumber: string;
   courseTitle: string;
   faculty1: string;
   daytime: string;
   units: number;
   category: string;
-  stem: string;
   ldr: string;
   averageRating?: number;
   ratingCount?: number;
@@ -30,7 +28,6 @@ const HomePage: React.FC = () => {
   const [filters, setFilters] = useState({
     units: '',
     category: '',
-    stem: '',
     ldr: '',
     daytime: '',
   });
@@ -90,6 +87,33 @@ const HomePage: React.FC = () => {
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
   };
 
+  const renderSortArrow = (column: keyof Course) => {
+    if (sortConfig?.key !== column) return '↕️';
+    return sortConfig.direction === 'asc' ? '⬆️' : '⬇️';
+  };
+
+  const [sortConfig, setSortConfig] = useState<{ key: keyof Course; direction: 'asc' | 'desc' } | null>(null);
+
+  // Sorting logic
+  const sortedCourses = [...filteredCourses].sort((a, b) => {
+    if (!sortConfig) return 0;
+    const { key, direction } = sortConfig;
+    const valueA = a[key] ?? '';
+    const valueB = b[key] ?? '';
+    if (valueA < valueB) return direction === 'asc' ? -1 : 1;
+    if (valueA > valueB) return direction === 'asc' ? 1 : -1;
+    return 0;
+  });
+
+  const handleSort = (key: keyof Course) => {
+    setSortConfig((prev) => {
+      if (prev && prev.key === key) {
+        return { key, direction: prev.direction === 'asc' ? 'desc' : 'asc' };
+      }
+      return { key, direction: 'asc' };
+    });
+  };
+
   return (
     <div className="homepage-container">
       <div className="navbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
@@ -117,12 +141,6 @@ const HomePage: React.FC = () => {
           ))}
         </select>
 
-        <select name="stem" value={filters.stem} onChange={handleFilterChange}>
-          <option value="">Filter by STEM</option>
-          <option value="Y">Yes</option>
-          <option value="N">No</option>
-        </select>
-
         <select name="ldr" value={filters.ldr} onChange={handleFilterChange}>
           <option value="">Filter by Leadership</option>
           <option value="Y">Yes</option>
@@ -135,50 +153,60 @@ const HomePage: React.FC = () => {
             <option key={daytime} value={daytime}>{daytime}</option>
           ))}
         </select>
-
-        <select name="sortBy" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-          <option value="">Sort by</option>
-          <option value="ratings">Ratings</option>
-        </select>
       </div>
 
+
+
+
       <table className="courses-table">
-        <thead>
-          <tr>
-            <th>Course Number</th>
-            <th>Title</th>
-            <th>Faculty</th>
-            <th>Day/Time</th>
-            <th>Units</th>
-            <th>Category</th>
-            <th>STEM</th>
-            <th>Leadership</th>
-            <th>Ratings</th>
+      <thead>
+        <tr>
+          <th onClick={() => handleSort('courseTitle')} style={{ cursor: 'pointer' }}>
+            Course Title {renderSortArrow('courseTitle')}
+          </th>
+          <th onClick={() => handleSort('faculty1')} style={{ cursor: 'pointer' }}>
+            Faculty {renderSortArrow('faculty1')}
+          </th>
+          <th onClick={() => handleSort('daytime')} style={{ cursor: 'pointer' }}>
+            Day/Time {renderSortArrow('daytime')}
+          </th>
+          <th onClick={() => handleSort('units')} style={{ cursor: 'pointer' }}>
+            Units {renderSortArrow('units')}
+          </th>
+          <th onClick={() => handleSort('category')} style={{ cursor: 'pointer' }}>
+            Category {renderSortArrow('category')}
+          </th>
+          <th onClick={() => handleSort('ldr')} style={{ cursor: 'pointer' }}>
+            Leadership {renderSortArrow('ldr')}
+          </th>
+          <th onClick={() => handleSort('averageRating')} style={{ cursor: 'pointer' }}>
+            Ratings {renderSortArrow('averageRating')}
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {sortedCourses.map((course) => (
+          <tr key={course.id}>
+            <td>
+              <Link to={`/course/${course.id}`} className="link">
+                {course.courseTitle}
+              </Link>
+            </td>
+            <td>{course.faculty1 || 'Not Available'}</td>
+            <td>{course.daytime}</td>
+            <td>{course.units}</td>
+            <td>{course.category}</td>
+            <td>{course.ldr}</td>
+            <td>
+              {course.averageRating !== undefined && course.ratingCount
+                ? `${course.averageRating.toFixed(1)} / 5 (${course.ratingCount} reviews)`
+                : 'No ratings'}
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          {filteredCourses.map((course) => (
-            <tr key={course.id}>
-              <td>
-                <Link to={`/course/${course.id}`} className="link">
-                  {course.courseNumber}
-                </Link>
-              </td>
-              <td>{course.courseTitle}</td>
-              <td>{course.faculty1 || 'Not Available'}</td>
-              <td>{course.daytime}</td>
-              <td>{course.units}</td>
-              <td>{course.category}</td>
-              <td>{course.stem}</td>
-              <td>{course.ldr}</td>
-              <td>
-                  {course.averageRating !== undefined && course.ratingCount
-                  ? `${course.averageRating.toFixed(1)} / 5 (${course.ratingCount} reviews)`
-                  : 'No ratings'}
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        ))}
+      </tbody>
+
       </table>
     </div>
   );
