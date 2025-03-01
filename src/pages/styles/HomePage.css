@@ -56,3 +56,60 @@
 .link:hover {
   text-decoration: underline;
 }
+
+
+
+.courses-table th {
+  color: black;            /* Make header text black */
+  white-space: nowrap;      /* Prevent wrapping */
+  padding: 8px 12px;        /* Add padding for breathing room */
+  text-align: left;         /* Align text to the left */
+  font-weight: bold;        /* Ensure bold headers */
+  border-bottom: 2px solid #ddd;
+}
+
+.courses-table th div {
+  display: flex;
+  align-items: center;
+  gap: 5px;                  /* Add gap between text and sort icon */
+}
+
+.courses-table th .sort-icon {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 100;
+  top: 100%;  /* Place tooltip directly below */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  pointer-events: none;  /* Important so it doesn't block clicks */
+}
+
+.hover-container:hover .hover-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+

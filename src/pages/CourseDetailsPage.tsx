@@ -33,6 +33,14 @@ const CourseDetailsPage: React.FC = () => {
   const [editComment, setEditComment] = useState<string>('');
   const [courseDetails, setCourseDetails] = useState<CourseDetails | null>(null);
   const [userRating, setUserRating] = useState<number | null>(null);
+  const [showOnboarding, setShowOnboarding] = useState<boolean>(false);
+
+  useEffect(() => {
+    const showOnboarding = localStorage.getItem('showOnboarding') === 'true';
+    setShowOnboarding(showOnboarding);
+}, []);
+
+
 
   useEffect(() => {
     const fetchCourseDetails = async () => {
@@ -214,11 +222,26 @@ const CourseDetailsPage: React.FC = () => {
         <div className="add-comment">
           <textarea
             rows={3}
-            placeholder="Add your comment..."
+            placeholder="Tell us what you loved or hated about this course!"
             value={editComment}
             onChange={(e) => setEditComment(e.target.value)}
             className="input-field"
           />
+
+            {showOnboarding && (
+                    <div className="popup-tooltip" style={{
+                        position: 'absolute',
+                        top: '-50px',
+                        left: '0'
+                    }}>
+                        Tell us what you loved or hated about this course!
+                        <button onClick={() => {
+                            setShowOnboarding(false);
+                            localStorage.removeItem('showOnboarding');
+                        }}>&#x2715;</button>
+                    </div>
+                )}
+
           <button className="btn btn-primary" onClick={handleAddComment} style={{ marginTop: '10px' }}>
             Submit
           </button>

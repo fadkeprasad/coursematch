@@ -14,6 +14,7 @@ interface Course {
   units: number;
   category: string;
   ldr: string;
+  quarter?: string;
   averageRating?: number;
   ratingCount?: number;
 }
@@ -24,14 +25,17 @@ const HomePage: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([]);
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
   const [username, setUsername] = useState<string | null>(null);
+  
 
   const [filters, setFilters] = useState({
     units: '',
     category: '',
     ldr: '',
     daytime: '',
+    quarter: '',
   });
   const [sortBy, setSortBy] = useState<string>('');
+
 
   useEffect(() => {
     if (!user) {
@@ -47,6 +51,8 @@ const HomePage: React.FC = () => {
           ? userDoc.data()?.username || user.email
           : user.email;
         setUsername(fetchedUsername);
+      
+        
 
         const courseCollection = collection(db, 'courses');
         const snapshot = await getDocs(courseCollection);
@@ -117,16 +123,33 @@ const HomePage: React.FC = () => {
   return (
     <div className="homepage-container">
       <div className="navbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 20px' }}>
-        <img src="/images/coursematch_logo.png" alt="CourseMatch Logo" className="logo" />
-        <div className="nav-links" style={{ display: 'flex', gap: '15px', marginLeft: 'auto' }}>
-          <Link to="/account" className="link">{username}</Link>
-          <Link to="/" className="link">Sign Out</Link>
-        </div>
+          <div className="hover-container">
+              <img src="/images/coursematch_logo.png" alt="CourseMatch Logo" className="logo" />
+              <div className="hover-tooltip">Rate and review the courses to help your friends find the right one!</div>
+          </div>
+
+          <div className="nav-links" style={{ display: 'flex', gap: '15px', marginLeft: 'auto' }}>
+              <div className="hover-container">
+                  <Link to="/account" className="link">{username}</Link>
+                  <div className="hover-tooltip">This is your anonymous username</div>
+              </div>
+              <Link to="/" className="link">Sign Out</Link>
+          </div>
       </div>
+
+
 
       <h3>All Courses</h3>
 
       <div className="filters-container">
+
+        <select name="quarter" value={filters.quarter} onChange={handleFilterChange}>
+          <option value="">Filter by Quarter</option>
+          {[...new Set(courses.map(course => course.quarter))].map(quarter => (
+            <option key={quarter} value={quarter}>{quarter}</option>
+          ))}
+        </select>
+
         <select name="units" value={filters.units} onChange={handleFilterChange}>
           <option value="">Filter by Units</option>
           {[...new Set(courses.map(course => course.units))].map(unit => (
@@ -161,11 +184,15 @@ const HomePage: React.FC = () => {
       <table className="courses-table">
       <thead>
         <tr>
-          <th onClick={() => handleSort('courseTitle')} style={{ cursor: 'pointer' }}>
-            Course Title {renderSortArrow('courseTitle')}
+          <th onClick={() => handleSort('courseTitle')} style={{ cursor: 'pointer', position: 'relative' }}>
+              Course Title {renderSortArrow('courseTitle')}
           </th>
+
           <th onClick={() => handleSort('faculty1')} style={{ cursor: 'pointer' }}>
             Faculty {renderSortArrow('faculty1')}
+          </th>
+          <th onClick={() => handleSort('quarter')} style={{ cursor: 'pointer' }}>
+            Quarter {renderSortArrow('quarter')}
           </th>
           <th onClick={() => handleSort('daytime')} style={{ cursor: 'pointer' }}>
             Day/Time {renderSortArrow('daytime')}
@@ -194,6 +221,7 @@ const HomePage: React.FC = () => {
               </Link>
             </td>
             <td>{course.faculty1 || 'Not Available'}</td>
+            <td>{course.quarter || 'Not Available'}</td>
             <td>{course.daytime}</td>
             <td>{course.units}</td>
             <td>{course.category}</td>
