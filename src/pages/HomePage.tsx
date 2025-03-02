@@ -17,7 +17,13 @@ interface Course {
   quarter?: string;
   averageRating?: number;
   ratingCount?: number;
+  day1: string;        // New field (M, T, W, Th, F)
+  day2?: string;       // Optional second day
+  start: number;       // Fractional time (0 to 1) like 0.423611111
+  end: number;         // Fractional time (0 to 1)
+  liked?: boolean;
 }
+
 
 const HomePage: React.FC = () => {
   const [user] = useAuthState(auth);
@@ -28,12 +34,31 @@ const HomePage: React.FC = () => {
   
 
   const [filters, setFilters] = useState({
-    units: '',
-    category: '',
-    ldr: '',
-    daytime: '',
-    quarter: '',
+    units: [] as string[],
+    category: [] as string[],
+    ldr: [] as string[],
+    quarter: [] as string[],
+    days: [] as string[],      // New - for M, T, W, Th, F
+    timeBlocks: [] as string[]  // New - for morning, afternoon, evening
+});
+
+const toggleFilter = (key: keyof typeof filters, value: string) => {
+  setFilters((prevFilters) => {
+      const updated = prevFilters[key].includes(value)
+          ? prevFilters[key].filter((v: string) => v !== value)
+          : [...prevFilters[key], value];
+
+      return { ...prevFilters, [key]: updated };
   });
+};
+
+const clearFilter = (key: keyof typeof filters) => {
+  setFilters((prevFilters) => ({ ...prevFilters, [key]: [] }));
+};
+
+
+
+
   const [sortBy, setSortBy] = useState<string>('');
 
 
@@ -50,9 +75,7 @@ const HomePage: React.FC = () => {
         const fetchedUsername = userDoc.exists()
           ? userDoc.data()?.username || user.email
           : user.email;
-        setUsername(fetchedUsername);
-      
-        
+        setUsername(fetchedUsername);        
 
         const courseCollection = collection(db, 'courses');
         const snapshot = await getDocs(courseCollection);
@@ -73,20 +96,45 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     let result = [...courses];
 
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value) {
-        result = result.filter((course) =>
-          course[key as keyof Course]?.toString().toLowerCase().includes(value.toLowerCase())
+    if (filters.units.length) {
+        result = result.filter(course => filters.units.includes(course.units.toString()));
+    }
+
+    if (filters.category.length) {
+        result = result.filter(course => filters.category.includes(course.category));
+    }
+
+    if (filters.ldr.length) {
+        result = result.filter(course => filters.ldr.includes(course.ldr));
+    }
+
+    if (filters.quarter.length) {
+        result = result.filter(course => course.quarter && filters.quarter.includes(course.quarter));
+    }
+
+    if (filters.days.length) {
+        result = result.filter(course => 
+            filters.days.includes(course.day1) || (course.day2 && filters.days.includes(course.day2))
         );
-      }
-    });
+    }
+
+    if (filters.timeBlocks.length) {
+        result = result.filter(course => {
+            if (typeof course.start !== 'number') return false;  // Safeguard if data is corrupt
+            if (filters.timeBlocks.includes('morning') && course.start < 0.5) return true;
+            if (filters.timeBlocks.includes('afternoon') && course.start >= 0.5 && course.start < 0.708333333) return true;
+            if (filters.timeBlocks.includes('evening') && course.start >= 0.708333333) return true;
+            return false;
+        });
+    }
 
     if (sortBy === 'ratings') {
-      result.sort((a, b) => (b.averageRating || 0) - (a.averageRating || 0));
+        result.sort((a, b) => (b.averageRating || 0) - (a.averageRating || 0));
     }
 
     setFilteredCourses(result);
-  }, [filters, courses, sortBy]);
+}, [filters, courses, sortBy]);
+
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -143,40 +191,128 @@ const HomePage: React.FC = () => {
 
       <div className="filters-container">
 
-        <select name="quarter" value={filters.quarter} onChange={handleFilterChange}>
-          <option value="">Filter by Quarter</option>
-          {[...new Set(courses.map(course => course.quarter))].map(quarter => (
-            <option key={quarter} value={quarter}>{quarter}</option>
-          ))}
-        </select>
+{/* Quarter Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Quarter ▼</button>
+    <div className="dropdown-content">
+        {[...new Set(courses.map(course => course.quarter))].map(quarter => (
+            <label key={quarter} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.quarter.includes(quarter!)}
+                    onChange={() => toggleFilter('quarter', quarter!)}
+                />
+                {quarter}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('quarter')}>Clear all</button>
+        </div>
+    </div>
+</div>
 
-        <select name="units" value={filters.units} onChange={handleFilterChange}>
-          <option value="">Filter by Units</option>
-          {[...new Set(courses.map(course => course.units))].map(unit => (
-            <option key={unit} value={unit}>{unit}</option>
-          ))}
-        </select>
+{/* Units Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Units ▼</button>
+    <div className="dropdown-content">
+        {[...new Set(courses.map(course => course.units))].map(unit => (
+            <label key={unit} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.units.includes(unit.toString())}
+                    onChange={() => toggleFilter('units', unit.toString())}
+                />
+                {unit}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('units')}>Clear all</button>
+        </div>
+    </div>
+</div>
 
-        <select name="category" value={filters.category} onChange={handleFilterChange}>
-          <option value="">Filter by Category</option>
-          {[...new Set(courses.map(course => course.category))].map(category => (
-            <option key={category} value={category}>{category}</option>
-          ))}
-        </select>
+{/* Category Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Category ▼</button>
+    <div className="dropdown-content">
+        {[...new Set(courses.map(course => course.category))].map(category => (
+            <label key={category} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.category.includes(category)}
+                    onChange={() => toggleFilter('category', category)}
+                />
+                {category}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('category')}>Clear all</button>
+        </div>
+    </div>
+</div>
 
-        <select name="ldr" value={filters.ldr} onChange={handleFilterChange}>
-          <option value="">Filter by Leadership</option>
-          <option value="Y">Yes</option>
-          <option value="N">No</option>
-        </select>
+{/* Leadership Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Leadership ▼</button>
+    <div className="dropdown-content">
+        {['Y', 'N'].map(option => (
+            <label key={option} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.ldr.includes(option)}
+                    onChange={() => toggleFilter('ldr', option)}
+                />
+                {option}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('ldr')}>Clear all</button>
+        </div>
+    </div>
+</div>
 
-        <select name="daytime" value={filters.daytime} onChange={handleFilterChange}>
-          <option value="">Filter by Day/Time</option>
-          {[...new Set(courses.map(course => course.daytime))].map(daytime => (
-            <option key={daytime} value={daytime}>{daytime}</option>
-          ))}
-        </select>
-      </div>
+{/* Days Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Days ▼</button>
+    <div className="dropdown-content">
+        {['M', 'T', 'W', 'Th', 'F'].map(day => (
+            <label key={day} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.days.includes(day)}
+                    onChange={() => toggleFilter('days', day)}
+                />
+                {day}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('days')}>Clear all</button>
+        </div>
+    </div>
+</div>
+
+{/* Time Filter */}
+<div className="filter-group">
+    <button type="button" className="dropdown-button">Filter by Time ▼</button>
+    <div className="dropdown-content">
+        {['morning', 'afternoon', 'evening'].map(block => (
+            <label key={block} className="checkbox-item">
+                <input
+                    type="checkbox"
+                    checked={filters.timeBlocks.includes(block)}
+                    onChange={() => toggleFilter('timeBlocks', block)}
+                />
+                {block}
+            </label>
+        ))}
+        <div className="dropdown-footer">
+            <button onClick={() => clearFilter('timeBlocks')}>Clear all</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
 
 
 
@@ -184,6 +320,7 @@ const HomePage: React.FC = () => {
       <table className="courses-table">
       <thead>
         <tr>
+          
           <th onClick={() => handleSort('courseTitle')} style={{ cursor: 'pointer', position: 'relative' }}>
               Course Title {renderSortArrow('courseTitle')}
           </th>
